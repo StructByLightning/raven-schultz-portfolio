@@ -1,0 +1,36 @@
+{
+  "name": "ravenschultz.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@svgr/webpack": "^8.0.1",
+    "cookies-next": "^4.0.0",
+    "critters": "^0.0.16",
+    "dequals": "^1.0.0",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.1",
+    "mixpanel": "^0.18.0",
+    "next": "^13.4.19",
+    "nodemailer": "^6.9.3",
+    "postcss-scss": "^4.0.6",
+    "qs": "^6.11.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.5.2",
+    "react-select": "^5.7.3",
+    "stylelint": "^15.6.1",
+    "stylelint-config-rational-order-fix": "^0.1.9",
+    "stylelint-order": "^6.0.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint-plugin-html": "^7.1.0",
+    "sass": "^1.62.1"
+  }
+}
