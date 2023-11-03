@@ -105,11 +105,11 @@ const PROJECTS = [
 
 const MISCELLANEOUS = [
   {
-    name: "Black Hole",
+    name: "Black Hole 404",
     body: <>
-      <p>This animation was made for a friend&apos;s website as an exercise in vanilla Canvas. Each star&apos;s position is recalculated with trigonometry each frame, using requestAnimationFrame to avoid overwhelming the browser.</p>
+      <p>This animation was made for a friend&apos;s website as an exercise in vanilla Canvas. Each star&apos;s position is recalculated with trigonometry using requestAnimationFrame to avoid overwhelming the browser.</p>
     </>,
-    href: null,
+    href: "/miscellaneous/black-hole",
     image: {
       base: "/images/cards/blackHole/blackHole",
       widths: [100, 200, 300, 400, 500],
@@ -123,7 +123,7 @@ const MISCELLANEOUS = [
     body: <>
       <p>This animation was a proof-of-concept for a client at Deviate Labs. I drew the stained glass images with Midjourney, and then converted them into SVGs by hand. Then, I used GSAP&apos;s MorphSVG plugin to animate the transition between the two images.</p>
     </>,
-    href: null,
+    href: "/miscellaneous/stained-glass-morph",
     image: {
       base: "/images/cards/stainedGlassMorph/stainedGlassMorph",
       widths: [100, 200, 300, 400, 500],
@@ -217,7 +217,7 @@ const MISCELLANEOUS = [
     },
   },
   {
-    name: "Circuitry",
+    name: "Circuitry 404",
     body: <>
       <p>This high-tech circuitry animation was made for a friend&apos;s website. I found a circuitry image online and traced it into SVG so I could animate the lines using GSAP&apos;s DrawSVG plugin.</p>
     </>,
@@ -419,7 +419,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className={css.miscellaneous}>
+      <section className={css.miscellaneous} id="miscellaneous">
         <div className="sectionInner">
           <h2>Miscellaneous</h2>
           <p>These are some of the smaller animation projects I&apos;ve worked on.</p>
@@ -430,7 +430,10 @@ export default async function Home() {
               picture={item.image}
               href={item.href}
               className={`dark ${css.card}`}
-            >{item.body}</Card>)}
+            >
+              {item.body}
+              {item.href && <Button href={item.href} ghost dark className={css.button}>View Animation</Button>}
+            </Card>)}
           </div>
         </div>
       </section>
