@@ -137,7 +137,7 @@ const MISCELLANEOUS = [
     body: <>
       <p>I wrote this animation for a friend&apos;s website. I first typed out the text as an SVG filled path, and then masked it with a stroked path. Then I animated the stroked path using the stroke-dashoffset technique to make it look like it&apos;s self-drawing.</p>
     </>,
-    href: null,
+    href: "/miscellaneous/self-writing-text",
     image: {
       base: "/images/cards/selfWritingText/selfWritingText",
       widths: [100, 200, 300, 400, 500],
