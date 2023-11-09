@@ -163,9 +163,9 @@ const MISCELLANEOUS = [
   {
     name: "Deviate Tracking",
     body: <>
-      <p>I wrote this little animation for an in-house project at Deviate Labs. It was a compact, eye-catching way to introduce the basic concepts of the product, and was inspired by the <a href="https://www.youtube.com/watch?v=UWYHV4RrXu0">Dome Keeper</a> trailer.</p>
+      <p>I wrote this little animation for an in-house SaaS project at Deviate Labs. It was a compact, eye-catching way to introduce the basic concepts of the product, and was inspired by the the Dome Keeper videogame trailer.</p>
     </>,
-    href: null,
+    href: "/miscellaneous/deviate-tracking",
     image: {
       base: "/images/cards/deviateTracking/deviateTracking",
       widths: [100, 200, 300, 400, 500],
@@ -432,7 +432,7 @@ export default async function Home() {
               className={`dark ${css.card}`}
             >
               {item.body}
-              {item.href && <Button href={item.href} ghost dark className={css.button}>View Animation</Button>}
+              {item.href && <Button ghost dark className={css.button}>View Animation</Button>}
             </Card>)}
           </div>
         </div>
