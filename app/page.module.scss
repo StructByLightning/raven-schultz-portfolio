@@ -68,6 +68,7 @@ section.experience{
 
       .year{
         display: flex;
+        width: 10rem;
 
         color: var(--white);
         white-space: nowrap;
@@ -84,11 +85,17 @@ section.experience{
           display: flex;
           align-items: center;
           justify-content: center;
+          width: 100%;
           padding: var(--spacing4);
 
           font-weight: 600;
 
           background-color: var(--black);
+          border-top-left-radius: var(--curve);
+          border-bottom-left-radius: var(--curve);
+          @media (max-width: $collapse){
+            border-radius: var(--curve);
+          }
         }
 
         &::after{

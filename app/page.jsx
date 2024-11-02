@@ -16,6 +16,8 @@ import JavascriptSvg from "@/public/icons/javascript.svg";
 import DatabaseSvg from "@/public/icons/database.svg";
 import StrapiSvg from "@/public/icons/strapi.svg";
 import JestSvg from "@/public/icons/jest.svg";
+import GcpSvg from "@/public/icons/gcp.svg";
+import NodeJsSvg from "@/public/icons/node-js.svg";
 
 export const metadata = {
   title: "Raven Schultz | Portfolio",
@@ -279,18 +281,62 @@ const SKILLS = {
   GIT: {icon: <CodePullRequestSvg/>, label: "Git"},
   GSAP: {icon: <GsapSvg/>, label: "GSAP"},
   HTML: {icon: <Html5Svg/>, label: "HTML5"},
-  LINUX: {icon: <UbuntuSvg/>, label: "Linux"},
-  REACT: {icon: <ReactSvg/>, label: "React"},
-  SCSS: {icon: <SassSvg/>, label: "SCSS"},
-  NEXTJS: {icon: <NextJsSvg/>, label: "NextJS"},
   JAVASCRIPT: {icon: <JavascriptSvg/>, label: "Javascript"},
   JEST: {icon: <JestSvg/>, label: "Jest"},
+  LINUX: {icon: <UbuntuSvg/>, label: "Linux"},
+  NEXTJS: {icon: <NextJsSvg/>, label: "NextJS"},
+  REACT: {icon: <ReactSvg/>, label: "React"},
+  SCSS: {icon: <SassSvg/>, label: "SCSS"},
   SQL: {icon: <DatabaseSvg/>, label: "SQL"},
   STRAPI: {icon: <StrapiSvg/>, label: "Strapi"},
+  NODEJS: {icon: <NodeJsSvg/>, label: "NodeJs"},
+  GCP: {icon: <GcpSvg/>, label: "GCP"},
 };
 
 
 const EXPERIENCE = [
+  //{
+  //title: "Frontend Software Engineer"
+  //},
+  {
+    title: "Frontend Software Engineer",
+    year: "2024-present",
+    company: "SymbyAI (Remote)",
+    body: <>
+      <p>At SymbyAI, I&apos;m responsible for the design and implementation of the frontend for the Symby platform.</p>
+
+      <ul>
+        <li>Designed the first version of the SymbyAI platform for automating the scientific peer review process.</li>
+      </ul>
+    </>,
+    skills: [
+      SKILLS.REACT,
+      SKILLS.NEXTJS,
+      SKILLS.SCSS,
+    ],
+  },
+  {
+    title: "Software Engineer",
+    year: "2024-2024",
+    company: "Westland Real Estate Group (Remote)",
+    body: <>
+      <p>At Westland, I worked on high-value internal tools for real estate management and accounting.</p>
+
+      <ul>
+        <li>Saved $72,000/year by obfuscating apartment occupation status with a NodeJS script to reduce break-ins.</li>
+        <li>Increased development velocity by 60% by mentoring junior engineers on AI tools and best practices.</li>
+        <li>Migrated a React.js and Firebase web app from the Yardi platform to the Entrata platform.</li>
+      </ul>
+    </>,
+    skills: [
+      SKILLS.REACT,
+      SKILLS.NODEJS,
+      SKILLS.SCSS,
+      SKILLS.DOCKER,
+      SKILLS.GIT,
+      SKILLS.GCP,
+    ],
+  },
   {
     title: "Software Engineer",
     year: "2021-2023",
