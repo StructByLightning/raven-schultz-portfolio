@@ -19,16 +19,39 @@ section.intro{
     }
 
     .subheadline{
-      margin-bottom: var(--spacing8);
+      margin-bottom: var(--spacing6);
 
       font-weight: 300;
       font-size: var(--fontSize4);
       @media (max-width: 900px), (max-height: 900px){
-        margin-bottom: var(--spacing7);
-
         font-size: var(--fontSize3);
       }
       @media (max-width: 600px), (max-height: 600px){font-size: var(--fontSize2);}
+    }
+
+    .description{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: var(--spacing8);
+
+      font-size: var(--fontSize3);
+      line-height: var(--lineHeight);
+      text-align: center;
+      @media (max-width: 1000px){
+        font-size: var(--fontSize2);
+      }
+      @media (max-width: 800px){
+        display: block;
+        margin-bottom: var(--spacing7);
+      }
+    }
+
+    .ctas{
+      display: flex;
+      gap: var(--spacing6);
+      @media (max-width: 600px){
+        flex-direction: column;
+      }
     }
   }
 }

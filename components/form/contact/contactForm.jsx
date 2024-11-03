@@ -27,7 +27,9 @@ export default function ContactForm({}) {
     getBody={getBody}
     success="Thank you! Your message has been received and I will respond within 72 hours."
   >
-    <h3 className={css.h3}>Contact</h3>
+    <h3 className={css.h3}>Start a Project</h3>
+    <p>Want to build something cool together? Drop me a line below or at <a href="mailto:msravenschultz@gmail.com"> msravenschultz@gmail.com</a> - I&apos;m always excited to tackle a new challenge!</p>
+
     <FloatingTextInput
       label="Name"
       name="name"

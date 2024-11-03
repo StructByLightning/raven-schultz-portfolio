@@ -5,7 +5,7 @@ export default function Footer({}) {
       <div className={css.headline}>Let&apos;s Connect</div>
       <a href="mailto:msravenschultz@gmail.com">msravenschultz@gmail.com</a>
       <hr />
-      <div className={css.copyright}>Copyright © 2023, Raven Schultz</div>
+      <div className={css.copyright}>Copyright © 2024, Raven Schultz</div>
     </div>
   </footer>;
 }

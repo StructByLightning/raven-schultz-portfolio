@@ -21,14 +21,66 @@ import NodeJsSvg from "@/public/icons/node-js.svg";
 
 export const metadata = {
   title: "Raven Schultz | Portfolio",
-  description: "I build beautiful, high-performance websites.",
+  description: "I'm a Full-stack Design and React Engineer. I help companies eliminate the painful back-and-forth between designers and developers by handling both roles, ensuring fast delivery and pixel-perfect implementation.",
 };
 
 const PROJECTS = [
   {
+    name: "SymbyAI",
+    body: <>
+      <p>I took on the challenge of designing SymbyAI&apos;s automated peer review platform. Scientific peer review is a notoriously complex process, but thanks to modern design techniques, I was able to streamline it into a set of four intuitive pages. And to explain how their cutting-edge AI works, I created a ten-second hero animation for the homepage. The SymbyAI team loved my designs so much that they hired me full-time to build their frontend.</p>
+    </>,
+    image: {
+      base: "/images/cards/symby/symby", //adjust path as needed
+      widths: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
+      sizes: "max-width:1300px 50vw, max-width: 700px 100vw, 33vw",
+      exts: ["webp", "png"],
+      alt: "The SymbyAI platform interface.",
+    },
+  },
+  {
+    name: "Immersive Audio Album",
+    body: <>
+      <p>I crafted a completely new interface for this immersive music marketplace, building everything from custom audio visualizers to an intuitive preview system. By focusing on the unique needs of audio artists, the new design resonated so well it boosted traffic by 40% and caught the attention of major music labels who previously wouldn&apos;t give us the time of day.</p>
+    </>,
+    image: {
+      base: "/images/cards/immersiveaudioalbum/immersiveaudioalbum",
+      widths: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
+      sizes: "max-width:1300px 50vw, max-width: 700px 100vw, 33vw",
+      exts: ["webp", "png"],
+      alt: "The Immersive Audio Album homepage.",
+    },
+  },
+  {
+    name: "X Marks the Site",
+    body: <>
+      <p>I built an scavenger hunt puzzle game that became the cornerstone of a major marketing campaign. Using Next.js and GSAP, I created fluid animations and game mechanics that kept 80,000+ players engaged. The challenge of making it both fun and technically robust was incredibly satisfying - especially when we saw players sharing their victories on social media.</p>
+    </>,
+    image: {
+      base: "/images/cards/xmarksthesite/xmarksthesite",
+      widths: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
+      sizes: "max-width:1300px 50vw, max-width: 700px 100vw, 33vw",
+      exts: ["webp", "png"],
+      alt: "The X Marks the Site infinite art puzzle game.",
+    },
+  },
+  {
+    name: "The Guild of the ROSE",
+    body: <>
+      <p>This was my favorite kind of challenge: building something complex that looks simple. I created a full-stack community platform with a custom Canvas-based skill tree (think RPG-style character progression), integrated Stripe payments, and a content management system. It&apos;s been used by 2,000+ users who to track their real-life improvement at everything from social skills to advanced memorization techniques.</p>
+    </>,
+    image: {
+      base: "/images/cards/guildoftherose/guildoftherose",
+      widths: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
+      sizes: "max-width:1300px 50vw, max-width: 700px 100vw, 33vw",
+      exts: ["webp", "png"],
+      alt: "The Guild of the ROSE homepage.",
+    },
+  },
+  {
     name: "Deviate Labs",
     body: <>
-      <p>Deviate Labs is a marketing agency. I migrated their corporate website from vanilla HTML/CSS/Javascript to NextJS, greatly reducing the time it took to build new pages and improving design consistency across their existing pages.</p>
+      <p>I transformed this corporate site from basic HTML into a modern Next.js powerhouse. The fun part was building a library of reusable animations, components, and CSS classes that made creating new pages feel like playing with LEGOs. The system was so efficient it cut development time by 40% while making everything load 10% faster.</p>
     </>,
     image: {
       base: "/images/cards/deviateLabs/deviateLabs",
@@ -41,7 +93,7 @@ const PROJECTS = [
   {
     name: "Deviate Tracking",
     body: <>
-      <p>Deviate Tracking is a SaaS that helps marketers track their users. I improved the stability of the Deviate Tracking API backend by refactoring and unit testing the code (which was originally all in a single, untested file), reducing customer complaints to almost zero. I also wrote a custom homepage with vanilla HTML/CSS/Javascript.</p>
+      <p>This analytics platform minimum viable product needed both technical stability and intuitive design. I rebuilt it from scratch, focusing on a streamlined landing page and rock-steady backend to process user requests. The best part? Support tickets dropped by 90% because users could finally find what they needed without asking for help. It&apos;s satisfying when good design solves real problems.</p>
     </>,
     image: {
       base: "/images/cards/deviatetracking/deviatetracking",
@@ -49,229 +101,6 @@ const PROJECTS = [
       sizes: "max-width:1300px 50vw, max-width: 700px 100vw, 33vw",
       exts: ["webp", "png"],
       alt: "The Deviate Tracking homepage.",
-    },
-  },
-  {
-    name: "Immersive Audio Album",
-    body: <>
-      <p>Immersive Audio Album is marketplace for artists to sell immersive music. I designed and implemented an entirely new appearance for the website after it took off in 2022, boosting overall traffic by 40% and securing several deals with labels who previously didn&apos;t consider us a serious business.</p>
-    </>,
-    image: {
-      base: "/images/cards/immersiveaudioalbum/immersiveaudioalbum",
-      widths: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
-      sizes: "max-width:1300px 50vw, max-width: 700px 100vw, 33vw",
-      exts: ["webp", "png"],
-      alt: "The Immersive Audio Album homepage.",
-    },
-  },
-  {
-    name: "The Guild of the ROSE",
-    body: <>
-      <p>The Guild of the ROSE is a self-improvement community. I designed and wrote an ecommerce website with NextJS and Strapi that handles subscription payments (via Stripe), showcases blog articles, and has a complex &quot;skill tree&quot; that the Guild uses to encourage members to improve their lives. The skill tree is an interactive webapp built with Canvas and PixiJS for performance.</p>
-    </>,
-    image: {
-      base: "/images/cards/guildoftherose/guildoftherose",
-      widths: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
-      sizes: "max-width:1300px 50vw, max-width: 700px 100vw, 33vw",
-      exts: ["webp", "png"],
-      alt: "The Guild of the ROSE homepage.",
-    },
-  },
-  {
-    name: "Stax Chrome Extension",
-    body: <>
-      <p>Stax is a Chrome extension written in React that helps Amazon Mechanical Turk workers find the best paying gigs. It automatically scraped the Amazon Mechanical Turk website and analyzed the available gigs before displaying them in a more user-friendly list. It was also capable of automatically accepting gigs and breaking captchas. I wrote it in college as a side project and it had over a thousand real users before I stopped maintaining it in 2021.</p>
-    </>,
-    image: {
-      base: "/images/cards/amazon/amazon",
-      widths: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
-      sizes: "max-width:1300px 50vw, max-width: 700px 100vw, 33vw",
-      exts: ["webp", "png"],
-      alt: "The Amazon logo.",
-    },
-  },
-  {
-    name: "Video Game Bot",
-    body: <>
-      <p>This bot was a project I wrote in high school with Java and C++. It could automatically play a multiplayer game (Forsaken World) and coordinate with six other bot instances running on computers networked together in my garage. The bots gathered virtual resources that could be sold for virtual currency. I then sold the virtual currency to other players for real world dollars — making this project the first time I got paid for my work.</p>
-    </>,
-    image: {
-      base: "/images/cards/forsakenWorld/forsakenWorld",
-      widths: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
-      sizes: "max-width:1300px 50vw, max-width: 700px 100vw, 33vw",
-      exts: ["webp", "png"],
-      alt: "A screenshot of the Forsaken World game.",
-    },
-  },
-];
-
-const MISCELLANEOUS = [
-  {
-    name: "Black Hole 404",
-    body: <>
-      <p>This animation was made for a friend&apos;s website as an exercise in vanilla Canvas. Each star&apos;s position is recalculated with trigonometry using requestAnimationFrame to avoid overwhelming the browser.</p>
-    </>,
-    href: "/miscellaneous/black-hole",
-    image: {
-      base: "/images/cards/blackHole/blackHole",
-      widths: [100, 200, 300, 400, 500],
-      sizes: "max-width:1300px 33vw, max-width: 1000px 50vw, max-width: 600px 100vw, 25vw",
-      exts: ["webp", "png"],
-      alt: "A black hole with purple stars falling into it.",
-    },
-  },
-  {
-    name: "Stained Glass Morph",
-    body: <>
-      <p>This animation was a proof-of-concept for a client at Deviate Labs. I drew the stained glass images with Midjourney, and then converted them into SVGs by hand. Then, I used GSAP&apos;s MorphSVG plugin to animate the transition between the two images.</p>
-    </>,
-    href: "/miscellaneous/stained-glass-morph",
-    image: {
-      base: "/images/cards/stainedGlassMorph/stainedGlassMorph",
-      widths: [100, 200, 300, 400, 500],
-      sizes: "max-width:1300px 33vw, max-width: 1000px 50vw, max-width: 600px 100vw, 25vw",
-      exts: ["webp", "png"],
-      alt: "A stained glass mountain morphing into a stained glass tree.",
-    },
-  },
-  {
-    name: "Self Writing Text",
-    body: <>
-      <p>I wrote this animation for a friend&apos;s website. I first typed out the text as an SVG filled path, and then masked it with a stroked path. Then I animated the stroked path using the stroke-dashoffset technique to make it look like it&apos;s self-drawing.</p>
-    </>,
-    href: "/miscellaneous/self-writing-text",
-    image: {
-      base: "/images/cards/selfWritingText/selfWritingText",
-      widths: [100, 200, 300, 400, 500],
-      sizes: "max-width:1300px 33vw, max-width: 1000px 50vw, max-width: 600px 100vw, 25vw",
-      exts: ["webp", "png"],
-      alt: "Handwritten text that's in the process of being written.",
-    },
-  },
-  {
-    name: "Glitch Effect",
-    body: <>
-      <p>This glitch effect is done entirely with SVG filters and the &lt;animate&gt; tag. I made it for a friend&apos;s website as a way to practice using SVG filters. It uses 20 sub-filters to create the full glitch effect.</p>
-    </>,
-    href: null,
-    image: {
-      base: "/images/cards/glitchEffect/glitchEffect",
-      widths: [100, 200, 300, 400, 500],
-      sizes: "max-width:1300px 33vw, max-width: 1000px 50vw, max-width: 600px 100vw, 25vw",
-      exts: ["webp", "png"],
-      alt: "A glitchy cyberpunk effect.",
-    },
-  },
-  {
-    name: "Deviate Tracking",
-    body: <>
-      <p>I wrote this little animation for an in-house SaaS project at Deviate Labs. It was a compact, eye-catching way to introduce the basic concepts of the product, and was inspired by the the Dome Keeper videogame trailer.</p>
-    </>,
-    href: "/miscellaneous/deviate-tracking",
-    image: {
-      base: "/images/cards/deviateTracking/deviateTracking",
-      widths: [100, 200, 300, 400, 500],
-      sizes: "max-width:1300px 33vw, max-width: 1000px 50vw, max-width: 600px 100vw, 25vw",
-      exts: ["webp", "png"],
-      alt: "A complex animation introducing a SaaS product.",
-    },
-  },
-  {
-    name: "Sonic Button",
-    body: <>
-      <p>This button was made for an in-house music marketplace run by Deviate Labs. The button is used for the primary CTA on several pages and is constructed from seven SVG paths that are then scaled and morphed to look like pulsating sound waves.</p>
-    </>,
-    href: null,
-    image: {
-      base: "/images/cards/sonicButton/sonicButton",
-      widths: [100, 200, 300, 400, 500],
-      sizes: "max-width:1300px 33vw, max-width: 1000px 50vw, max-width: 600px 100vw, 25vw",
-      exts: ["webp", "png"],
-      alt: "A button surrounded by pulsing sound waves.",
-    },
-  },
-  {
-    name: "Deviate Tracking Ad",
-    body: <>
-      <p>This ad was a proof-of-concept for a client at Deviate Labs to demonstrate what an animated HTML5 ad could look like.</p>
-    </>,
-    href: null,
-    image: {
-      base: "/images/cards/deviateTrackingAd/deviateTrackingAd",
-      widths: [100, 200, 300, 400, 500],
-      sizes: "max-width:1300px 33vw, max-width: 1000px 50vw, max-width: 600px 100vw, 25vw",
-      exts: ["webp", "png"],
-      alt: "An animated HTML5 ad for a SaaS client.",
-    },
-  },
-  {
-    name: "Growing Rose",
-    body: <>
-      <p>This cute little rose animation was made as an experiment to see if I could simulate a growth effect by sequencing scale animations. It&apos;s surprisingly elegant for how low-tech it is.</p>
-    </>,
-    href: null,
-    image: {
-      base: "/images/cards/growingRose/growingRose",
-      widths: [100, 200, 300, 400, 500],
-      sizes: "max-width:1300px 33vw, max-width: 1000px 50vw, max-width: 600px 100vw, 25vw",
-      exts: ["webp", "png"],
-      alt: "An elegant black, gold, and red rose.",
-    },
-  },
-  {
-    name: "Circuitry 404",
-    body: <>
-      <p>This high-tech circuitry animation was made for a friend&apos;s website. I found a circuitry image online and traced it into SVG so I could animate the lines using GSAP&apos;s DrawSVG plugin.</p>
-    </>,
-    href: null,
-    image: {
-      base: "/images/cards/circuitry/circuitry",
-      widths: [100, 200, 300, 400, 500],
-      sizes: "max-width:1300px 33vw, max-width: 1000px 50vw, max-width: 600px 100vw, 25vw",
-      exts: ["webp", "png"],
-      alt: "A circuit board with glowing lines.",
-    },
-  },
-  {
-    name: "Calculator Game",
-    body: <>
-      <p>This simple game was made for an education client at Deviate Labs. My team gave me the basic concept, and I brought it to life with GSAP animations.</p>
-    </>,
-    href: null,
-    image: {
-      base: "/images/cards/calculatorGame/calculatorGame",
-      widths: [100, 200, 300, 400, 500],
-      sizes: "max-width:1300px 33vw, max-width: 1000px 50vw, max-width: 600px 100vw, 25vw",
-      exts: ["webp", "png"],
-      alt: "A simple mathematics-based game for kids.",
-    },
-  },
-  {
-    name: "Confetti",
-    body: <>
-      <p>This confetti animation was a proof of concept for a client at Deviate Labs. It was made with PixiJS (a canvas rendering engine) and some basic skew animations to simulate the effect of the confetti particles twirling as they fall down the screen.</p>
-    </>,
-    href: null,
-    image: {
-      base: "/images/cards/confetti/confetti",
-      widths: [100, 200, 300, 400, 500],
-      sizes: "max-width:1300px 33vw, max-width: 1000px 50vw, max-width: 600px 100vw, 25vw",
-      exts: ["webp", "png"],
-      alt: "Swirling confetti falling down.",
-    },
-  },
-  {
-    name: "Zen Timer",
-    body: <>
-      <p>This breathing timer was a vanity project for a client at Deviate Labs. The border is animated with a rotating SVG gradient used as a mask, while the lungs and text are a scale and fade animations.</p>
-    </>,
-    href: null,
-    image: {
-      base: "/images/cards/zenTimer/zenTimer",
-      widths: [100, 200, 300, 400, 500],
-      sizes: "max-width:1300px 33vw, max-width: 1000px 50vw, max-width: 600px 100vw, 25vw",
-      exts: ["webp", "png"],
-      alt: "A breathing timer.",
     },
   },
 ];
@@ -295,11 +124,8 @@ const SKILLS = {
 
 
 const EXPERIENCE = [
-  //{
-  //title: "Frontend Software Engineer"
-  //},
   {
-    title: "Frontend Software Engineer",
+    title: "Frontend UI/UX Software Engineer",
     year: "2024-present",
     company: "SymbyAI (Remote)",
     body: <>
@@ -323,9 +149,9 @@ const EXPERIENCE = [
       <p>At Westland, I worked on high-value internal tools for real estate management and accounting.</p>
 
       <ul>
-        <li>Saved $72,000/year by obfuscating apartment occupation status with a NodeJS script to reduce break-ins.</li>
-        <li>Increased development velocity by 60% by mentoring junior engineers on AI tools and best practices.</li>
-        <li>Migrated a React.js and Firebase web app from the Yardi platform to the Entrata platform.</li>
+        <li>Saved $72,000/year by obfuscating apartment occupation status with NodeJS to reduce break-ins</li>
+        <li>Increased development velocity by 60% by mentoring junior engineers on AI tools and best practices</li>
+        <li>Migrated a React.js and Firebase web app from the Yardi CMS to the Entrata CMS</li>
       </ul>
     </>,
     skills: [
@@ -345,11 +171,14 @@ const EXPERIENCE = [
       <p>At Deviate Labs I worked on a variety of projects for many different clients an in-house projects. Here are some of the highlights:</p>
 
       <ul>
-        <li>Created X Marks the Site, a puzzle game, with NextJS and Strapi for a marketing campaign with 80k+ users.</li>
-        <li>Improved traffic by 40% for Immersive Audio Album, an immersive music marketplace, by redesigning the front-end.</li>
-        <li>Reduced request errors by 90% by writing Jest unit tests for Deviate Tracking, an analytics SaaS.</li>
-        <li>Boosted ad engagement by creating animated HTML5 ads with GSAP and SCSS.</li>
-        <li>Built a noise monitoring site for classrooms (1.2k monthly users) with NextJS, SCSS, and GSAP.</li>
+        <li>Created a comprehensive design library with Next.js and SCSS, cutting development time by 40%</li>
+        <li>Designed and engineered an interactive puzzle game (80k+ users) with complex animation and state</li>
+        <li>Increased marketplace sessions by 40% through UX research and implementation of an intuitive interface</li>
+        <li>Built immersive, animated experiences using GSAP and custom React.js components</li>
+        <li>Architected a full-stack AI marketplace in Next.js with focus on intuitive prompt discovery and management</li>
+        <li>Reduced platform errors by 90% through Jest unit testing and performance optimization</li>
+        <li>Saved $40,000 by automating business processes with Puppeteer</li>
+        <li>Improved loading performance by 10% by optimizing the React.js/Next/js corporate website with Lighthouse</li>
       </ul>
       <p>In my time at Deviate Labs, I consistently advocated for user experience (UX) as a primary focus in all front-end work. I also pushed for software engineering best practices, such as source control, secure secrets management, containerization, and unit testing.</p>
     </>,
@@ -370,7 +199,7 @@ const EXPERIENCE = [
     year: "2020-2020",
     company: "Multnomah Education Service District (Remote)",
     body: <>
-      <p>During my six-month internship at the Multnomah Education Service District, I worked closely with a back-end engineer to design an internal user management webapp. As part of this project, I helped design SQL database schema, which was then made available through a GraphQL API. I also worked to improve data integrity by writing scripts to clean and consolidate data on a new server.</p>
+      <p>During my six-month internship at the Multnomah Education Service District, I worked closely with back-end engineers to design and implement an internal user management webapp. As part of this project, I helped design SQL database schema, which was then made available through a GraphQL API. I also worked to improve data integrity by writing scripts to clean and consolidate data on a new server.</p>
     </>,
     skills: [
       SKILLS.REACT,
@@ -385,12 +214,7 @@ const EXPERIENCE = [
     year: "2019-2019",
     company: "ON Semiconductor (Gresham, Oregon)",
     body: <>
-      <p>During my six-month internship at ON Semiconductor, I was primarily responsible for writing complex SQL queries and making small modifications to the 30 year old legacy codebase. Towards the end of the internship, I also wrote a webapp to streamline internal purchases. Here are some of the highlights:</p>
-      <ul>
-        <li>Saved $80,000 by adding a confirmation alert to unnecessary and expensive purchase orders.</li>
-        <li>Decreased internal app loading times by 90% by implementing a SQL request cache.</li>
-        <li>Analyzed and delivered complex SQL reports to aid management strategy.</li>
-      </ul>
+      <p>During my six-month internship at ON Semiconductor, I was primarily responsible for writing complex SQL queries and making small modifications to the 30 year old legacy codebase. I saved $80,000 by applying modern design practices to the outdated purchase order system and decreased app loading times by 90% with a SQL request cache for infrequently updated data.</p>
     </>,
     skills: [
       SKILLS.SQL,
@@ -408,8 +232,15 @@ export default async function Home() {
       <section className={css.intro}>
         <div className="sectionInner">
           <h1><span>Hello, I&apos;m</span> <b>Raven Schultz</b></h1>
-          <div className={css.subheadline}>I build beautiful, high-performance websites.</div>
-          <Button href="#about" ghost>Contact Me</Button>
+          <div className={css.subheadline}>Full-stack Design & React Engineer</div>
+          <div className={css.description}>
+            <span>I help companies eliminate the painful back-and-forth between designers and developers</span>
+            <span>by handling both roles, ensuring fast delivery and pixel-perfect implementation.</span>
+          </div>
+          <div className={css.ctas}>
+            <Button href="#projects">View Featured Work</Button>
+            <Button href="#contact" ghost>Start a Project</Button>
+          </div>
         </div>
       </section>
 
@@ -440,46 +271,32 @@ export default async function Home() {
           <h2>About</h2>
           <div className={css.row}>
             <div className={css.text}>
-              <p>I&apos;m Raven Schultz, a professional full-stack software engineer with a focus on the frontend. I&apos;ve been programming since elementary school, starting with platformer videogames, then moving on to videogame bots in high school, and finally getting into web development in college. Now I use those skills and more to design and write complex, beautiful, high-performing websites and webapps.</p>
 
-              <p>Programming is my passion and I&apos;m always interested in a challenge. You can check out some of my projects and work below or get in touch with me at <a href="mailto:msravenschultz@gmail.com">msravenschultz@gmail.com</a>.</p>
+
+              <p>I&apos;m a hybrid designer-developer who loves creating exceptional digital experiences. While most people are either designers or developers, I&apos;ve always been both - I get equally excited about perfecting a color palette and optimizing React page load times. This combination of technical expertise and strong design sensibility lets me build entire websites from scratch, handling  everything from initial Figma sketches to final AWS deployment.</p>
+
+              <p>My coding journey started with making simple games in elementary school, evolved into building bots in high school (including a network of six game bots running in my garage!), and finally led to web development in college. These days, I pour that same enthusiasm into creating  websites that are both beautiful and blazing fast.</p>
+
+              <p>I especially love working on complex animations and interactions - the kind that make users go &quot;wow, how did they do that?&quot; Whether it&apos;s morphing SVG paths, crafting pixel-perfect interfaces, or optimizing performance, I&apos;m always pushing to make things better and more interesting.</p>
+
             </div>
-            <div className={css.form}>
+            <div className={css.form} id="contact">
               <ContactForm/>
             </div>
           </div>
         </div>
       </section>
 
-      <section className={css.projects}>
+      <section className={css.projects} id="projects">
         <div className="sectionInner">
           <h2>Projects</h2>
-          <p>Here are some of the larger projects I&apos;ve worked on over the years, whether in a professional capacity or on my own time.</p>
+          <p>From complex web applications to interactive experiences, here are some highlights from how I&apos;ve helped companies solve real problems through design and development:</p>
           <div className={css.cards}>
             {PROJECTS.map((project) => <Card
               key={project.name}
               label={project.name}
               picture={project.image}
             >{project.body}</Card>)}
-          </div>
-        </div>
-      </section>
-
-      <section className={css.miscellaneous} id="miscellaneous">
-        <div className="sectionInner">
-          <h2>Miscellaneous</h2>
-          <p>These are some of the smaller animation projects I&apos;ve worked on.</p>
-          <div className={css.cards}>
-            {MISCELLANEOUS.map((item) => <Card
-              key={item.name}
-              label={item.name}
-              picture={item.image}
-              href={item.href}
-              className={`dark ${css.card}`}
-            >
-              {item.body}
-              {item.href && <Button ghost dark className={css.button}>View Animation</Button>}
-            </Card>)}
           </div>
         </div>
       </section>
