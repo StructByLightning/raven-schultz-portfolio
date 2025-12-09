@@ -19,6 +19,7 @@ import JestSvg from "@/public/icons/jest.svg";
 import GcpSvg from "@/public/icons/gcp.svg";
 import NodeJsSvg from "@/public/icons/node-js.svg";
 import Signature from "@/components/Signature/Signature";
+import ExpandingHr from "@/components/ExpandingHr/ExpandingHr";
 
 export const metadata = {
   title: "Raven Schultz | Portfolio",
@@ -244,6 +245,8 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      <ExpandingHr />
 
       <section className={css.experience}>
         <div className="sectionInner">
