@@ -7,15 +7,15 @@ section.intro{
     align-items: center;
     justify-content: center;
     h1{
-      margin-bottom: var(--spacing5);
+      margin: 0;
+
+      font-weight: 400;
 
       font-family: var(--primaryFont);
-      span{
-        font-weight: 400;
-      }
-      b{
-        font-weight: 400;
-      }
+    }
+
+    .signature{
+      margin: var(--spacing7) 0;
     }
 
     .subheadline{

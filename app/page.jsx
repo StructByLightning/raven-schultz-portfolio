@@ -232,7 +232,8 @@ export default async function Home() {
     <main className={css.main}>
       <section className={css.intro}>
         <div className="sectionInner">
-          <h1><span>Hello, I&apos;m</span> <Signature /></h1>
+          <h1>Hello, I&apos;m</h1>
+          <Signature className={css.signature} />
           <div className={css.subheadline}>Design Engineer</div>
           <div className={css.description}>
             <span>Most teams have designers who can't code and developers who can't design. I do both.</span>
