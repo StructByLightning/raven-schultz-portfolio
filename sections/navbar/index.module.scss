@@ -74,9 +74,10 @@
     padding: 0 var(--spacing5);
 
     color: var(--fg);
-    font-weight: 300;
+    font-weight: 400;
     font-size: var(--fontSize3);
-    text-transform: uppercase;
+    font-family: var(--capsFont);
+    text-transform: lowercase;
     text-decoration: none;
 
     background-color: var(--bg);

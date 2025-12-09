@@ -66,9 +66,10 @@
 
       color: var(--bg);
       font-weight: 400;
-
       font-size: var(--fontSize1);
-      text-transform: uppercase;
+
+      font-family: var(--capsFont);
+      text-transform: lowercase;
 
       background-color: var(--fg);
     }

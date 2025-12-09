@@ -11,7 +11,7 @@ section.intro{
 
       text-transform: none;
       span{
-        font-weight: 300;
+        font-weight: 400;
       }
       b{
         font-weight: 600;
@@ -21,7 +21,7 @@ section.intro{
     .subheadline{
       margin-bottom: var(--spacing6);
 
-      font-weight: 300;
+      font-weight: 400;
       font-size: var(--fontSize4);
       @media (max-width: 900px), (max-height: 900px){
         font-size: var(--fontSize3);

@@ -2,12 +2,12 @@ h1{
   margin: 0;
 
   color: var(--black);
-  font-weight: 300;
-
+  font-weight: 400;
   font-size: var(--fontSize7);
+
+  font-family: var(--capsFont);
   line-height: 1.3em;
   text-align: center;
-  text-transform: uppercase;
   @media (max-width: 900px), (max-height: 900px){font-size: var(--fontSize6);}
   @media (max-width: 600px), (max-height: 600px){font-size: var(--fontSize5);}
   @media (max-width: 450px), (max-height: 450px){font-size: var(--fontSize4);}
@@ -18,10 +18,10 @@ h2{
 
   color: var(--black);
   font-weight: 400;
-
   font-size: var(--fontSize6);
+
+  font-family: var(--capsFont);
   line-height: 1.3em;
-  text-transform: uppercase;
   @media (max-width: 800px), (max-height: 600px){font-size: var(--fontSize5);}
   @media (max-width: 600px), (max-height: 600px){
     margin: var(--spacing8) 0 var(--spacing5) 0;

@@ -21,10 +21,12 @@
     .headline{
       margin-bottom: var(--spacing5);
 
-      font-weight: 300;
+      font-weight: 400;
       font-size: var(--fontSize5);
+
+      font-family: var(--capsFont);
       text-align: center;
-      text-transform: uppercase;
+      text-transform: lowercase;
     }
 
     a{
