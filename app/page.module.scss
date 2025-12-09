@@ -9,12 +9,12 @@ section.intro{
     h1{
       margin-bottom: var(--spacing5);
 
-      text-transform: none;
+      font-family: var(--primaryFont);
       span{
         font-weight: 400;
       }
       b{
-        font-weight: 600;
+        font-weight: 400;
       }
     }
 
@@ -23,6 +23,8 @@ section.intro{
 
       font-weight: 400;
       font-size: var(--fontSize4);
+
+      font-family: var(--capsFont);
       @media (max-width: 900px), (max-height: 900px){
         font-size: var(--fontSize3);
       }

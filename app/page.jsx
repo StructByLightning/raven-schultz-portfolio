@@ -18,6 +18,7 @@ import StrapiSvg from "@/public/icons/strapi.svg";
 import JestSvg from "@/public/icons/jest.svg";
 import GcpSvg from "@/public/icons/gcp.svg";
 import NodeJsSvg from "@/public/icons/node-js.svg";
+import Signature from "@/components/Signature/Signature";
 
 export const metadata = {
   title: "Raven Schultz | Portfolio",
@@ -106,20 +107,20 @@ const PROJECTS = [
 ];
 
 const SKILLS = {
-  DOCKER: {icon: <DockerSvg/>, label: "Docker"},
-  GIT: {icon: <CodePullRequestSvg/>, label: "Git"},
-  GSAP: {icon: <GsapSvg/>, label: "GSAP"},
-  HTML: {icon: <Html5Svg/>, label: "HTML5"},
-  JAVASCRIPT: {icon: <JavascriptSvg/>, label: "Javascript"},
-  JEST: {icon: <JestSvg/>, label: "Jest"},
-  LINUX: {icon: <UbuntuSvg/>, label: "Linux"},
-  NEXTJS: {icon: <NextJsSvg/>, label: "NextJS"},
-  REACT: {icon: <ReactSvg/>, label: "React"},
-  SCSS: {icon: <SassSvg/>, label: "SCSS"},
-  SQL: {icon: <DatabaseSvg/>, label: "SQL"},
-  STRAPI: {icon: <StrapiSvg/>, label: "Strapi"},
-  NODEJS: {icon: <NodeJsSvg/>, label: "NodeJs"},
-  GCP: {icon: <GcpSvg/>, label: "GCP"},
+  DOCKER: { icon: <DockerSvg />, label: "Docker" },
+  GIT: { icon: <CodePullRequestSvg />, label: "Git" },
+  GSAP: { icon: <GsapSvg />, label: "GSAP" },
+  HTML: { icon: <Html5Svg />, label: "HTML5" },
+  JAVASCRIPT: { icon: <JavascriptSvg />, label: "Javascript" },
+  JEST: { icon: <JestSvg />, label: "Jest" },
+  LINUX: { icon: <UbuntuSvg />, label: "Linux" },
+  NEXTJS: { icon: <NextJsSvg />, label: "NextJS" },
+  REACT: { icon: <ReactSvg />, label: "React" },
+  SCSS: { icon: <SassSvg />, label: "SCSS" },
+  SQL: { icon: <DatabaseSvg />, label: "SQL" },
+  STRAPI: { icon: <StrapiSvg />, label: "Strapi" },
+  NODEJS: { icon: <NodeJsSvg />, label: "NodeJs" },
+  GCP: { icon: <GcpSvg />, label: "GCP" },
 };
 
 
@@ -227,15 +228,14 @@ const EXPERIENCE = [
 
 export default async function Home() {
   return <>
-    <Navbar/>
+    <Navbar />
     <main className={css.main}>
       <section className={css.intro}>
         <div className="sectionInner">
-          <h1><span>Hello, I&apos;m</span> <b>Raven Schultz</b></h1>
-          <div className={css.subheadline}>Full-stack Design & React Engineer</div>
+          <h1><span>Hello, I&apos;m</span> <Signature /></h1>
+          <div className={css.subheadline}>Design Engineer</div>
           <div className={css.description}>
-            <span>I help companies eliminate the painful back-and-forth between designers and developers</span>
-            <span>by handling both roles, ensuring fast delivery and pixel-perfect implementation.</span>
+            <span>Most teams have designers who can't code and developers who can't design. I do both.</span>
           </div>
           <div className={css.ctas}>
             <Button href="#projects">View Featured Work</Button>
@@ -281,7 +281,7 @@ export default async function Home() {
 
             </div>
             <div className={css.form} id="contact">
-              <ContactForm/>
+              <ContactForm />
             </div>
           </div>
         </div>
@@ -301,6 +301,6 @@ export default async function Home() {
         </div>
       </section>
     </main>
-    <Footer/>
+    <Footer />
   </>;
 }
