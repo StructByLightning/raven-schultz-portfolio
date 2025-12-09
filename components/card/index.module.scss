@@ -1,11 +1,11 @@
 .imageCard{
-  --fg: var(--white);
+  --fg: var(--cream);
   --bg: var(--black);
   --imageGradient: linear-gradient(#00000000 50%, #00000044 100%);
   &.dark{
     --fg: var(--black);
-    --bg: var(--white);
-    --imageGradient: linear-gradient(#ffffff00 50%, #ffffff11 100%);
+    --bg: var(--cream);
+    --imageGradient: linear-gradient(#f8f4ee00 50%, #f8f4ee11 100%);
   }
 
   position: relative;

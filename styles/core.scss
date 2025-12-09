@@ -23,7 +23,7 @@ body{
 
   font-family: var(--primaryFont);
 
-  background: var(--white);
+  background: var(--cream);
   @media (max-width: 1000px){font-size: var(--fontSize2);}
 }
 main{
@@ -35,7 +35,7 @@ main{
 
 .dark,
 .dark *{
-  color: var(--white);
+  color: var(--cream);
 }
 .light,
 .light *{

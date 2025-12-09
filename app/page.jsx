@@ -67,7 +67,7 @@ const PROJECTS = [
   {
     name: "The Guild of the ROSE",
     body: <>
-      <p>This was my favorite kind of challenge: building something complex that looks simple. I created a full-stack community platform with a custom Canvas-based skill tree (think RPG-style character progression), integrated Stripe payments, and a content management system. It&apos;s been used by 2,000+ users who to track their real-life improvement at everything from social skills to advanced memorization techniques.</p>
+      <p>This was my favorite kind of challenge: building something complex that looks simple. I created a full-stack community platform with a custom Canvas-based skill tree (think RPG-style character progression), integrated Stripe payments, and a content management system. It&apos;s been used by 2,000+ users to track their real-life improvement at everything from social skills to advanced memorization techniques.</p>
     </>,
     image: {
       base: "/images/cards/guildoftherose/guildoftherose",
@@ -93,7 +93,7 @@ const PROJECTS = [
   {
     name: "Deviate Tracking",
     body: <>
-      <p>This analytics platform minimum viable product needed both technical stability and intuitive design. I rebuilt it from scratch, focusing on a streamlined landing page and rock-steady backend to process user requests. The best part? Support tickets dropped by 90% because users could finally find what they needed without asking for help. It&apos;s satisfying when good design solves real problems.</p>
+      <p>This analytics platform launched as a minimum viable product and sorely needed both technical stability and intuitive design. I rebuilt it from scratch, focusing on a streamlined landing page and rock-steady backend to process user requests. The best part? Support tickets dropped by 90% because users could finally find what they needed without asking for help. It&apos;s satisfying when good design solves real problems.</p>
     </>,
     image: {
       base: "/images/cards/deviatetracking/deviatetracking",

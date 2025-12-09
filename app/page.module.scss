@@ -93,7 +93,7 @@ section.experience{
         display: flex;
         width: 10rem;
 
-        color: var(--white);
+        color: var(--cream);
         white-space: nowrap;
         @media (max-width: $collapse){
           grid-column: 1/2;
@@ -192,7 +192,7 @@ section.experience{
             align-items: center;
             padding: var(--spacing3) var(--spacing5);
 
-            color: var(--white);
+            color: var(--cream);
             font-weight: 400;
             font-size: var(--fontSize2);
 
@@ -203,7 +203,7 @@ section.experience{
               height: 0.9em;
               margin-right: var(--spacing3);
               path{
-                fill: var(--white);
+                fill: var(--cream);
               }
             }
             @media (max-width: 500px){

@@ -1,10 +1,10 @@
 .navbar{
   $collapse1: 200px;
   --fg: var(--black);
-  --bg: var(--white);
+  --bg: var(--cream);
 
   &.dark{
-    --fg: var(--white);
+    --fg: var(--cream);
     --bg: var(--black);
   }
 

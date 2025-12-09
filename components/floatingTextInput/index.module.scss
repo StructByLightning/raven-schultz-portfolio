@@ -1,12 +1,12 @@
 .floatingTextInput{
   --color: var(--black);
-  --accent: var(--purple);
+  --accent: var(--grayDark);
 
   position: relative;
 
 
   &.dark{
-    --color: var(--white);
+    --color: var(--cream);
   }
 
   .inputHolder{
@@ -158,18 +158,18 @@
 
 
   &.valid{
-    --color: var(--validLight);
+    --color: var(--valid);
   }
   &.invalid{
-    --color: var(--invalidLight);
+    --color: var(--invalid);
   }
 
   &.dark{
     &.valid{
-      --color: var(--validDark);
+      --color: var(--valid);
     }
     &.invalid{
-      --color: var(--invalidDark);
+      --color: var(--invalid);
     }
   }
 }

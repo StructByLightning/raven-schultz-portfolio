@@ -1,34 +1,34 @@
 button.button,
 a.button{
-  --text: var(--white);
+  --text: var(--cream);
   --background: var(--black);
   --border: var(--black);
-  --textHover: var(--accentLight);
-  --backgroundHover: var(--black);
-  --borderHover: var(--black);
+  --textHover: var(--cream);
+  --backgroundHover: var(--grayDark);
+  --borderHover: var(--grayDark);
 
   &.ghost{
     --text: var(--black);
     --background: transparent;
     --border: var(--black);
-    --textHover: var(--white);
+    --textHover: var(--cream);
     --backgroundHover: var(--black);
     --borderHover: var(--black);
   }
 
   &.grayscale{
-    --text: var(--white);
+    --text: var(--cream);
     --background: var(--black);
     --border: var(--black);
-    --textHover: var(--white);
-    --backgroundHover: var(--black);
-    --borderHover: var(--black);
+    --textHover: var(--cream);
+    --backgroundHover: var(--grayDark);
+    --borderHover: var(--grayDark);
 
     &.ghost{
       --text: var(--black);
       --background: transparent;
       --border: var(--black);
-      --textHover: var(--white);
+      --textHover: var(--cream);
       --backgroundHover: var(--black);
       --borderHover: var(--black);
     }
@@ -38,51 +38,51 @@ a.button{
     --text: var(--black);
     --background: transparent;
     --border: transparent;
-    --textHover: var(--accentLight);
+    --textHover: var(--grayDark);
     --backgroundHover: transparent;
     --borderHover: transparent;
   }
 
   &.dark{
     --text: var(--black);
-    --background: var(--white);
-    --border: var(--white);
+    --background: var(--cream);
+    --border: var(--cream);
     --textHover: var(--black);
-    --backgroundHover: var(--accentLight);
-    --borderHover: var(--accentLight);
+    --backgroundHover: var(--grayLight);
+    --borderHover: var(--grayLight);
 
     &.ghost{
-      --text: var(--white);
+      --text: var(--cream);
       --background: transparent;
-      --border: var(--white);
+      --border: var(--cream);
       --textHover: var(--black);
-      --backgroundHover: var(--white);
-      --borderHover: var(--white);
+      --backgroundHover: var(--cream);
+      --borderHover: var(--cream);
     }
 
     &.grayscale{
       --text: var(--black);
-      --background: var(--white);
-      --border: var(--white);
+      --background: var(--cream);
+      --border: var(--cream);
       --textHover: var(--black);
-      --backgroundHover: var(--white);
-      --borderHover: var(--white);
+      --backgroundHover: var(--grayLight);
+      --borderHover: var(--grayLight);
 
       &.ghost{
-        --text: var(--white);
+        --text: var(--cream);
         --background: transparent;
-        --border: var(--white);
+        --border: var(--cream);
         --textHover: var(--black);
-        --backgroundHover: var(--white);
-        --borderHover: var(--white);
+        --backgroundHover: var(--cream);
+        --borderHover: var(--cream);
       }
     }
 
     &.transparent{
-      --text: var(--white);
+      --text: var(--cream);
       --background: transparent;
       --border: transparent;
-      --textHover: var(--accentLight);
+      --textHover: var(--grayLight);
       --backgroundHover: transparent;
       --borderHover: transparent;
     }

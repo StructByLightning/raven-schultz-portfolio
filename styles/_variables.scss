@@ -46,13 +46,12 @@
   --curve: 0.25rem;
 
   --black: #000000;
-  --white: #eeeeee;
+  --cream: #f8f4ee;
 
-  --grayLight: #dddddd;
-  --gray: #757575;
-  --grayDark: #363636;
-
-  --accentLight: #52e0a2;
+  --gray: #747674;
+  --grayLight: #d0d2d0;
+  --grayDark: #565856;
+  --offWhite: #f9f9f9;
 
   --lineHeight: 1.6em;
 
@@ -65,9 +64,6 @@
 
   --copyMaxWidth: 800px;
 
-  --invalidLight: #c20000;
-  --invalidDark: #f00000;
-
-  --validLight: #008a00;
-  --validDark: #00b800;
+  --invalid: var(--black);
+  --valid: var(--black);
 }

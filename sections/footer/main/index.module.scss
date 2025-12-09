@@ -1,10 +1,10 @@
 .footer{
-  --fg: var(--white);
+  --fg: var(--cream);
   --bg: var(--black);
 
   &.light{
     --fg: var(--black);
-    --bg: var(--white);
+    --bg: var(--cream);
   }
 
   display: flex;
