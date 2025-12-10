@@ -15,7 +15,13 @@ section.intro{
     }
 
     .signature{
+      display: flex;
+      justify-content: center;
       margin: var(--spacing7) 0;
+      svg{
+        max-width: 61%;
+        height: auto;
+      }
     }
 
     .subheadline{

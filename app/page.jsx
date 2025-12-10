@@ -18,8 +18,8 @@ import StrapiSvg from "@/public/icons/strapi.svg";
 import JestSvg from "@/public/icons/jest.svg";
 import GcpSvg from "@/public/icons/gcp.svg";
 import NodeJsSvg from "@/public/icons/node-js.svg";
-import Signature from "@/components/Signature/Signature";
 import ExpandingHr from "@/components/ExpandingHr/ExpandingHr";
+import FoldSection from "@/app/components/FoldSection/FoldSection";
 
 export const metadata = {
   title: "Raven Schultz | Portfolio",
@@ -231,22 +231,16 @@ export default async function Home() {
   return <>
     <Navbar />
     <main className={css.main}>
-      <section className={css.intro}>
-        <div className="sectionInner">
-          <h1>Hello, I&apos;m</h1>
-          <Signature className={css.signature} />
-          <div className={css.subheadline}>Design Engineer</div>
-          <div className={css.description}>
-            <span>Most teams have designers who can't code and developers who can't design. I do both.</span>
-          </div>
-          <div className={css.ctas}>
-            <Button href="#projects">View Featured Work</Button>
-            <Button href="#contact" ghost>Start a Project</Button>
-          </div>
-        </div>
-      </section>
+      <FoldSection />
 
       <ExpandingHr />
+
+      <section className={css.symbyai}>
+
+
+      </section>
+
+
 
       <section className={css.experience}>
         <div className="sectionInner">
