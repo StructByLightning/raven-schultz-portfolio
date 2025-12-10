@@ -1,11 +1,12 @@
 "use client";
-import Button from "@/components/button";
+import Button, { BUTTON_VARIANTS } from "@/components/Button/Button";
 import css from "./FoldSection.module.scss";
 import SignatureSvg from "./signature.svg";
 import { useEffect, useRef } from "react";
 import { gsap } from "@/scripts/gsap";
 import CustomEase from "@/scripts/gsap/CustomEase";
 import DrawSVGPlugin from "@/scripts/gsap/DrawSVGPlugin";
+import GithubLogoSvg from "@/public/icons/github-logo.svg";
 
 export default function FoldSection() {
   let signatureRef = useRef();
@@ -63,7 +64,7 @@ export default function FoldSection() {
       </div>
       <div className={css.ctas} ref={ctasRef}>
         <Button className="initialInvis" href="#projects">View Featured Work</Button>
-        <Button className="initialInvis" href="#contact" ghost>Start a Project</Button>
+        <Button className="initialInvis" href="#contact" variant={BUTTON_VARIANTS.GHOST}>Start a Project</Button>
       </div>
     </div>
   </section>;

@@ -1,5 +1,5 @@
 import css from "./page.module.scss";
-import Button from "@/components/button";
+import Button, { BUTTON_VARIANTS } from "@/components/Button/Button";
 import Morph from "./morph/morph.jsx";
 import ArrowLeftSvg from "@/public/icons/arrow-left.svg";
 import Navbar from "@/sections/navbar";
@@ -12,16 +12,16 @@ export const metadata = {
 
 export default function FourOhFour() {
   return <>
-    <Navbar/>
+    <Navbar />
     <main className={css.main}>
       <section className={css.stainedGlass}>
         <div className="sectionInner">
-          <Morph/>
+          <Morph />
           <p>This animation was a proof-of-concept for a client at Deviate Labs. I drew the stained glass images with Midjourney, and then converted them into SVGs by hand. Then, I used GSAP&apos;s MorphSVG plugin to animate the transition between the two images.</p>
-          <Button href="/#miscellaneous" ghost><ArrowLeftSvg/>Back</Button>
+          <Button href="/#miscellaneous" iconLeft={<ArrowLeftSvg />} variant={BUTTON_VARIANTS.GHOST}>Back</Button>
         </div>
       </section>
     </main>
-    <Footer/>
+    <Footer />
   </>;
 }

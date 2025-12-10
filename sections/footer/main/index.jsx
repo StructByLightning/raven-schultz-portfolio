@@ -1,3 +1,4 @@
+import Button from "@/components/Button/Button";
 import css from "./index.module.scss";
 import FilePdfSvg from "@/public/icons/file-pdf.svg";
 import GithubLogoSvg from "@/public/icons/github-logo.svg";
@@ -7,21 +8,13 @@ export default function Footer({ }) {
     <div className="sectionInner">
       <div className={css.row}>
         <span>Raven Schultz · Seattle, WA</span>
-        <a href="mailto:msravenschultz@gmail.com">msravenschultz@gmail.com</a>
       </div>
       <div className={css.row}>
-        <a href="">
-          <FilePdfSvg />
-          <span>LinkedIn</span>
-        </a>
-        <a href="">
-          <FilePdfSvg />
-          <span>Github</span>
-        </a>
-        <a href="">
-          <FilePdfSvg />
-          <span>Resume</span>
-        </a>
+
+        <Button href="https://www.linkedin.com/in/ravenschultz/">LinkedIn</Button>
+        <Button href="github.com/StructByLightning">Github</Button>
+        <Button href="">Resume</Button>
+        <Button href="mailto:msravenschultz@gmail.com">msravenschultz@gmail.com</Button>
       </div>
     </div>
   </footer>;

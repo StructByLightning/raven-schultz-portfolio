@@ -1,6 +1,6 @@
 import css from "./page.module.scss";
 import Stars from "./stars.jsx";
-import Button from "@/components/button";
+import Button, { BUTTON_VARIANTS } from "@/components/Button/Button";
 
 export const metadata = {
   title: "Black Hole 404 | Portfolio",
@@ -11,13 +11,13 @@ export default function FourOhFour() {
   return <>
     <title>404 | Voidgoddess</title>
     <main className={`dark ${css.main}`}>
-      <Stars/>
+      <Stars />
       <div className={css.inner}>
         <div className={css.code}>404</div>
         <div className={css.status}>who are you in the void?</div>
 
         <div className={css.buttons}>
-          <Button href="/#miscellaneous" className={css.button} dark ghost>Return to &quot;reality&quot;</Button>
+          <Button className={css.button} dark href="/#miscellaneous" variant={BUTTON_VARIANTS.GHOST}>Return to &quot;reality&quot;</Button>
         </div>
       </div>
     </main>

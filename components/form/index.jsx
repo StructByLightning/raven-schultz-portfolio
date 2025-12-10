@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import css from "./index.module.scss";
-import Button from "@/components/button";
+import Button, { BUTTON_VARIANTS } from "@/components/Button/Button";
 
 const STATUSES = {
   SENDING: "WORKING",
@@ -17,7 +17,7 @@ export default function Form({
   cta,
   endpoint,
   className,
-  getBody = () => {},
+  getBody = () => { },
   success = "Message sent.",
   innerClassName = "",
   dark = false,
@@ -25,15 +25,15 @@ export default function Form({
   const [status, setStatus] = useState(STATUSES.READY);
 
 
-  async function submit(){
+  async function submit() {
     let allValid = true;
-    for (const [key, element] of Object.entries(refs)){
-      if (!(await element.current.isValid())){
+    for (const [key, element] of Object.entries(refs)) {
+      if (!(await element.current.isValid())) {
         allValid = false;
       }
     }
 
-    if (allValid){
+    if (allValid) {
       setStatus(STATUSES.SENDING);
 
       fetch(endpoint, {
@@ -49,7 +49,7 @@ export default function Form({
         body: JSON.stringify(getBody(refs)),
       })
         .then((res) => {
-          if (res.ok){
+          if (res.ok) {
             setStatus(STATUSES.SUCCESS);
           } else {
             setStatus(STATUSES.ERROR);
@@ -66,7 +66,7 @@ export default function Form({
   return <div className={thisClassName}>
     <div className={`${css.main} ${innerClassName}`}>
       {children}
-      <Button onClick={submit} loading={status === STATUSES.SENDING} dark={dark} ghost>{cta}</Button>
+      <Button dark={dark} loading={status === STATUSES.SENDING} onClick={submit} variant={BUTTON_VARIANTS.GHOST}>{cta}</Button>
     </div>
     <div className={css.successMessage}>{success}</div>
     <div className={css.errorMessage}>An error occurred. Please contact me directly at: <a href="mailto:msravenschultz@gmail.com">msravenschultz@gmail.com</a>.</div>

@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import LoadingSvg from "@/public/icons/loading.svg";
 import css from "./Button.module.scss";
+import DiamondSvg from "./diamond.svg"
 
 
 
@@ -13,13 +14,16 @@ import css from "./Button.module.scss";
  */
 export default function ButtonInner({ children, helperText, icon, iconLeft }) {
   return <>
-    <span className={css.text}>
+    <div className={css.border}>
+      <DiamondSvg />
+    </div>
+    <div className={css.text}>
       {iconLeft}
       {icon || children}
-    </span>
-    <span className={css.spinner}>
-      <LoadingSvg />
-    </span>
+    </div>
     {helperText && <div className={css.helperText}>{helperText}</div>}
+    <div className={css.border}>
+      <DiamondSvg />
+    </div>
   </>;
 }

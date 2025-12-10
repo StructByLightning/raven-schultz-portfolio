@@ -1,5 +1,5 @@
 import css from "./page.module.scss";
-import Button from "@/components/button";
+import Button, { BUTTON_VARIANTS } from "@/components/Button/Button";
 import Text from "./text.jsx";
 import ArrowLeftSvg from "@/public/icons/arrow-left.svg";
 import Navbar from "@/sections/navbar";
@@ -12,16 +12,16 @@ export const metadata = {
 
 export default function SelfWritingText() {
   return <>
-    <Navbar dark/>
+    <Navbar dark />
     <main className={`dark ${css.main}`}>
       <section className={css.wrapper}>
         <div className="sectionInner">
-          <Text/>
+          <Text />
           <p>I wrote this animation for a friend&apos;s website. I first typed out the text as an SVG filled path, and then masked it with a stroked path. Then I animated the stroked path using the stroke-dashoffset technique to make it look like it&apos;s self-drawing.</p>
-          <Button href="/#miscellaneous" ghost dark><ArrowLeftSvg/>Back</Button>
+          <Button dark href="/#miscellaneous" iconLeft={<ArrowLeftSvg />} variant={BUTTON_VARIANTS.GHOST}>Back</Button>
         </div>
       </section>
     </main>
-    <Footer/>
+    <Footer />
   </>;
 }
