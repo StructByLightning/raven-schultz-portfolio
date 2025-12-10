@@ -18,8 +18,7 @@ export default async function Home() {
     <main className={css.main}>
       <FoldSection />
 
-
-      <ResumeSection />
+      <ProjectsSection />
 
       <ExpandingHr />
 
@@ -27,7 +26,8 @@ export default async function Home() {
 
       <ExpandingHr />
 
-      <ProjectsSection />
+      <ResumeSection />
+
     </main>
     <Footer />
   </>;

@@ -124,8 +124,10 @@ function animate(root) {
 export default function ProjectsSection() {
   return <section className={css.projects} id="projects">
     <ScrollTriggeredAnimation animation={animate} className="sectionInner" threshold={0.1}>
-      <h2 className="initialInvis">Selected Work</h2>
-
+      <div className={css.header}>
+        <h2 className="initialInvis">Selected Work</h2>
+        <div className={css.subtitle}>Five years of professional work. Based in Seattle.</div>
+      </div>
       <div className={css.project}>
         <div className={css.image}>
           <Picture
