@@ -1,7 +1,7 @@
 /*eslint-disable complexity */
 "use client";
 import Link from "next/link";
-import React, {forwardRef, ReactNode} from "react";
+import React, { forwardRef, ReactNode } from "react";
 import constructClassName from "@/utilities/constructClassName";
 import tag from "@/utilities/tag";
 import css from "./Button.module.scss";
@@ -18,7 +18,7 @@ export const BUTTON_VARIANTS = {
   RAISED: "RAISED",
   GHOST: "GHOST",
   TEXT: "TEXT",
-} as const;
+};
 
 /**
  * Available button sizes
@@ -31,33 +31,8 @@ export const BUTTON_SIZES = {
   LARGE: "LARGE",
   REGULAR: "REGULAR",
   SMALL: "SMALL",
-} as const;
+};
 
-/**
- * Props for the Button component.
- */
-interface ButtonProps {
-  children?: ReactNode;
-  className?: string;
-  danger?: boolean;
-  dataTestId?: string;
-  disabled?: boolean;
-  ghost?: boolean;
-  helperText?: string;
-  href?: string;
-  icon?: ReactNode;
-  iconLeft?: ReactNode;
-  large?: boolean;
-  loading?: boolean;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void; //eslint-disable-line no-unused-vars
-  prefetch?: boolean;
-  size?: keyof typeof BUTTON_SIZES;
-  target?: string;
-  text?: boolean;
-  type?: "button" | "submit" | "reset" | undefined;
-  variant?: keyof typeof BUTTON_VARIANTS;
-  wrap?: boolean;
-}
 
 /**
  * A flexible button component that can render as either a `<Link>` or a `<button>`, depending on whether an `href` is provided.
@@ -82,7 +57,7 @@ interface ButtonProps {
  * @param variant    - [optional] Controls the button styling (default: BUTTON_VARIANTS.RAISED)
  * @param wrap       - [optional] If true, allows text wrapping inside the button (default: false)
  */
-export default forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(({
+export default forwardRef(({
   children,
   className = "",
   danger = false,
@@ -117,7 +92,7 @@ export default forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(({
 
 
   //log click event and call onClick handler
-  function handleClick(e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>){
+  function handleClick(e) {
     tag("buttonClick", {
       variant: variant,
       href,
@@ -131,19 +106,19 @@ export default forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(({
       type,
     });
 
-    if (onClick && !loading){
+    if (onClick && !loading) {
       onClick(e);
     }
   }
 
-  if (href){
+  if (href) {
     return <Link
       href={href}
       className={fullClassName}
       onClick={handleClick}
       target={target}
       prefetch={prefetch}
-      ref={ref as React.Ref<HTMLAnchorElement>}
+      ref={ref}
       aria-disabled={disabled}
       data-testid={dataTestId}
     >
@@ -154,7 +129,7 @@ export default forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(({
   return <button
     className={fullClassName}
     onClick={handleClick}
-    ref={ref as React.Ref<HTMLButtonElement>}
+    ref={ref}
     type={type}
     disabled={disabled}
     data-testid={dataTestId}

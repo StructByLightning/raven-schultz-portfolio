@@ -1,17 +1,7 @@
-import React, {ReactNode} from "react";
+import React, { ReactNode } from "react";
 import LoadingSvg from "@/public/icons/loading.svg";
 import css from "./Button.module.scss";
 
-
-/**
- * Props for the Inner component of the Button.
- */
-interface InnerProps {
-  children: ReactNode;
-  helperText?: string | null;
-  icon?: ReactNode;
-  iconLeft?: ReactNode;
-}
 
 
 /**
@@ -21,7 +11,7 @@ interface InnerProps {
  * @param icon       - Main icon of the button
  * @param iconLeft   - Icon to display on the left side of the button content
  */
-export default function ButtonInner({children, helperText, icon, iconLeft}:InnerProps){
+export default function ButtonInner({ children, helperText, icon, iconLeft }) {
   return <>
     <span className={css.text}>
       {iconLeft}
