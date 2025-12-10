@@ -3,7 +3,7 @@ import css from "./page.module.scss";
 import Footer from "@/sections/footer/main";
 import Navbar from "@/sections/navbar";
 import Card from "@/components/card";
-import ContactForm from "@/components/form/contact/contactForm";
+
 import SassSvg from "@/public/icons/sass.svg";
 import ReactSvg from "@/public/icons/react.svg";
 import UbuntuSvg from "@/public/icons/ubuntu.svg";
@@ -19,6 +19,7 @@ import JestSvg from "@/public/icons/jest.svg";
 import GcpSvg from "@/public/icons/gcp.svg";
 import NodeJsSvg from "@/public/icons/node-js.svg";
 import ExpandingHr from "@/components/ExpandingHr/ExpandingHr";
+import AboutSection from "@/app/components/AboutSection/AboutSection";
 import FoldSection from "@/app/components/FoldSection/FoldSection";
 import ResumeSection from "@/app/components/ResumeSection/ResumeSection";
 
@@ -239,33 +240,9 @@ export default async function Home() {
 
       <ExpandingHr />
 
-      <section className={css.symbyai}>
+      <AboutSection />
 
-
-      </section>
-
-
-
-      <section className={css.about} id="about">
-        <div className="sectionInner">
-          <h2>About</h2>
-          <div className={css.row}>
-            <div className={css.text}>
-
-
-              <p>I&apos;m a hybrid designer-developer who loves creating exceptional digital experiences. While most people are either designers or developers, I&apos;ve always been both - I get equally excited about perfecting a color palette and optimizing React page load times. This combination of technical expertise and strong design sensibility lets me build entire websites from scratch, handling  everything from initial Figma sketches to final AWS deployment.</p>
-
-              <p>My coding journey started with making simple games in elementary school, evolved into building bots in high school (including a network of six game bots running in my garage!), and finally led to web development in college. These days, I pour that same enthusiasm into creating  websites that are both beautiful and blazing fast.</p>
-
-              <p>I especially love working on complex animations and interactions - the kind that make users go &quot;wow, how did they do that?&quot; Whether it&apos;s morphing SVG paths, crafting pixel-perfect interfaces, or optimizing performance, I&apos;m always pushing to make things better and more interesting.</p>
-
-            </div>
-            <div className={css.form} id="contact">
-              <ContactForm />
-            </div>
-          </div>
-        </div>
-      </section>
+      <ExpandingHr />
 
       <section className={css.projects} id="projects">
         <div className="sectionInner">

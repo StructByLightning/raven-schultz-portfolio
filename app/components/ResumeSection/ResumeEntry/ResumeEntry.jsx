@@ -12,7 +12,7 @@ import JestSvg from "@/public/icons/jest.svg";
 import GcpSvg from "@/public/icons/gcp.svg";
 import NodeJsSvg from "@/public/icons/node-js.svg";
 import css from "./ResumeEntry.module.scss";
-import Chip from "@/app/components/Chip/Chip";
+import Chip from "@/components/Chip/Chip";
 import SassSvg from "@/public/icons/sass.svg";
 import ReactSvg from "@/public/icons/react.svg";
 import ScrollTriggeredAnimation from "@/components/ScrollTriggeredAnimation/ScrollTriggeredAnimation";
