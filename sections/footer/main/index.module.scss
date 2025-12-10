@@ -1,52 +1,41 @@
 .footer{
-  --fg: var(--cream);
-  --bg: var(--black);
-
-  &.light{
-    --fg: var(--black);
-    --bg: var(--cream);
-  }
-
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
 
-  background-color: var(--bg);
-
-  >div{
+  > div{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: var(--spacing8);
 
-    .headline{
-      margin-bottom: var(--spacing5);
-
-      font-weight: 400;
-      font-size: var(--fontSize5);
-
-      font-family: var(--capsFont);
-      text-align: center;
-      text-transform: lowercase;
+    .row{
+      display: flex;
+      gap: var(--spacing8);
+      justify-content: center;
     }
 
     a{
-      text-align: center;
-    }
+      display: flex;
+      align-items: center;
 
-    hr{
-      align-self: stretch;
-      width: 100%;
-      height: 1px;
-      margin: var(--spacing6) 0;
+      text-decoration: none;
 
-      background-color: var(--gray);
-      border: 0;
-    }
+      svg{
+        width: auto;
+        height: 1.618em;
+        margin-right: var(--spacing3);
+        path{
+          transition: fill var(--speed1) ease-in-out;
+        }
+      }
 
-    .copyright{
-      color: var(--gray);
-      font-size: var(--fontSize1);
-      font-style: italic;
+      &:hover{
+        color: var(--cream);
+
+        svg path{
+          fill: var(--cream);
+        }
+      }
     }
   }
 }

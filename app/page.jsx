@@ -28,6 +28,8 @@ export default async function Home() {
 
       <ResumeSection />
 
+      <ExpandingHr />
+
     </main>
     <Footer />
   </>;
