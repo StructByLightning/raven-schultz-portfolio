@@ -20,6 +20,7 @@ import GcpSvg from "@/public/icons/gcp.svg";
 import NodeJsSvg from "@/public/icons/node-js.svg";
 import ExpandingHr from "@/components/ExpandingHr/ExpandingHr";
 import FoldSection from "@/app/components/FoldSection/FoldSection";
+import ResumeSection from "@/app/components/ResumeSection/ResumeSection";
 
 export const metadata = {
   title: "Raven Schultz | Portfolio",
@@ -232,6 +233,9 @@ export default async function Home() {
     <Navbar />
     <main className={css.main}>
       <FoldSection />
+
+
+      <ResumeSection />
 
       <ExpandingHr />
 
