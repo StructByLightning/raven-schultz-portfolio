@@ -1,0 +1,9 @@
+section.projects{
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing6);
+    @media (max-width: 1300px){grid-template-columns: 1fr 1fr;}
+    @media (max-width: 700px){grid-template-columns: 1fr;}
+  }
+}
