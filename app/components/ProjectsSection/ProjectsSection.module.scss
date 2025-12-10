@@ -1,9 +1,37 @@
-section.projects{
-  .cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing6);
-    @media (max-width: 1300px){grid-template-columns: 1fr 1fr;}
-    @media (max-width: 700px){grid-template-columns: 1fr;}
+section.projects > div{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing10);
+  align-items: center;
+
+  .project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    .image{
+      overflow: hidden;
+
+      border-radius: var(--curve);
+    }
+
+    h3{
+      margin: var(--spacing6) 0 0 0;
+
+      font-family: var(--capsFont);
+    }
+
+    .subtitle{
+      margin-bottom: var(--spacing6);
+
+      font-size: var(--fontSize2);
+      font-style: italic;
+    }
+
+    .text{
+      max-width: 800px;
+    }
   }
 }
