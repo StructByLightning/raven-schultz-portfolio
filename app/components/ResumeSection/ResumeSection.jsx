@@ -1,19 +1,8 @@
 import css from "./ResumeSection.module.scss";
-import Chip from "@/app/components/Chip/Chip";
-import SassSvg from "@/public/icons/sass.svg";
-import ReactSvg from "@/public/icons/react.svg";
-import UbuntuSvg from "@/public/icons/ubuntu.svg";
-import Html5Svg from "@/public/icons/html5.svg";
-import CodePullRequestSvg from "@/public/icons/code-pull-request.svg";
-import DockerSvg from "@/public/icons/docker.svg";
-import GsapSvg from "@/public/icons/gsap.svg";
 import NextJsSvg from "@/public/icons/next-js.svg";
-import JavascriptSvg from "@/public/icons/javascript.svg";
-import DatabaseSvg from "@/public/icons/database.svg";
-import StrapiSvg from "@/public/icons/strapi.svg";
-import JestSvg from "@/public/icons/jest.svg";
-import GcpSvg from "@/public/icons/gcp.svg";
 import NodeJsSvg from "@/public/icons/node-js.svg";
+import ReactSvg from "@/public/icons/react.svg";
+import SassSvg from "@/public/icons/sass.svg";
 import ResumeEntry from "@/app/components/ResumeSection/ResumeEntry/ResumeEntry";
 
 
@@ -35,78 +24,49 @@ export default function ResumeSection() {
         ]}
       />
 
-      <div className={css.company}>
-        <div className={css.verticalSeparator}></div>
+      <ResumeEntry
+        title="Full Stack Engineer"
+        subtitle="Westland Real Estate Group · 2024 — 2024"
+        techs={[
+          { icon: <ReactSvg />, text: "React" },
+          { icon: <NodeJsSvg />, text: "Node" },
+          { icon: <SassSvg />, text: "SCSS" },
+        ]}
+        body={[
+          "Eight months at a real estate company. The most interesting problem: their website was basically telling burglars which apartments were empty. I redesigned how availability was displayed, which cut break-in risk and saved $72k/year.",
+          "Also spent time mentoring junior devs on prompt engineering and migrating a React app between third-party CMSes. Useful work, but not very interesting.",
+        ]}
+      />
 
-        <h3>Lead Frontend Engineer</h3>
-        <div className={css.subtitle}>SymbyAI · 2024 — Present</div>
-        <div className={css.body}>
+      <ResumeEntry
+        title="Full Stack Engineer"
+        subtitle="Deviate Labs · 2021 — 2023"
+        techs={[
+          { icon: <ReactSvg />, text: "React" },
+          { icon: <NextJsSvg />, text: "Next" },
+          { icon: <NodeJsSvg />, text: "Node" },
+          { icon: <SassSvg />, text: "SCSS" },
+        ]}
+        body={[
+          "Two and a half years as the web engineer generalist. Whatever needed building, I built.",
+          "The highlights: a puzzle game that hit 80k users, with complex animation and state management. A music marketplace redesign that boosted sessions by 40%. An AI prompt ecommerce marketplace from scratch. A component library that cut dev time by 40%. Business process automation that saved $40k.",
+          "This is where I learned to ship fast and still care about craft.",
+        ]}
+      />
 
-
-        </div>
-
-        <div className={css.tech}>
-          <Chip icon={<ReactSvg />} text="React" />
-          <Chip icon={<NextJsSvg />} text="Next" />
-          <Chip icon={<SassSvg />} text="SCSS" />
-        </div>
-      </div>
-
-      <div className={css.company}>
-        <div className={css.verticalSeparator}></div>
-
-        <h3>Full Stack Engineer</h3>
-        <div className={css.subtitle}>Westland Real Estate Group · 2024 — 2024</div>
-        <div className={css.body}>
-
-          <p>Eight months at a real estate company. The most interesting problem: their website was basically telling burglars which apartments were empty. I redesigned how availability was displayed, which cut break-in risk and saved $72k/year.</p>
-          <p>Also spent time mentoring junior devs on prompt engineering and migrating a React app between third-party CMSes. Useful work, but not very interesting.</p>
-        </div>
-
-        <div className={css.tech}>
-          <Chip icon={<ReactSvg />} text="React" />
-          <Chip icon={<NodeJsSvg />} text="Node" />
-          <Chip icon={<SassSvg />} text="SCSS" />
-        </div>
-      </div>
-
-      <div className={css.company}>
-        <div className={css.verticalSeparator}></div>
-
-        <h3>Full Stack Engineer</h3>
-        <div className={css.subtitle}>Deviate Labs · 2021 — 2023</div>
-        <div className={css.body}>
-
-          <p>Two and a half years as the web engineer generalist. Whatever needed building, I built.</p>
-          <p>The highlights: a puzzle game that hit 80k users, with complex animation and state management. A music marketplace redesign that boosted sessions by 40%. An AI prompt ecommerce marketplace from scratch. A component library that cut dev time by 40%. Business process automation that saved $40k.</p>
-          <p>This is where I learned to ship fast and still care about craft.</p>
-        </div>
-
-        <div className={css.tech}>
-          <Chip icon={<ReactSvg />} text="React" />
-          <Chip icon={<NextJsSvg />} text="Next" />
-          <Chip icon={<NodeJsSvg />} text="Node" />
-          <Chip icon={<SassSvg />} text="SCSS" />
-        </div>
-      </div>
-
-      <div className={css.company}>
-        <div className={css.verticalSeparator}></div>
-
-        <h3>Full Stack Engineer Intern</h3>
-        <div className={css.subtitle}>Multnomah ESD · ON Semiconductor · 2019 — 2020</div>
-        <div className={css.body}>
-
-          <p>At ON Semi, I saved $80k by adding a single JavaScript alert that stopped accidental purchase orders. Sometimes the best solutions are dumb.</p>
-          <p>At Multnomah, I built internal webapps with minimal supervision. Good training for figuring things out alone.</p>
-        </div>
-
-        <div className={css.tech}>
-          <Chip icon={<ReactSvg />} text="React" />
-          <Chip icon={<NextJsSvg />} text="Next" />
-          <Chip icon={<SassSvg />} text="SCSS" />
-        </div>
-      </div>
+      <ResumeEntry
+        title="Full Stack Engineer Intern"
+        subtitle="Multnomah ESD · ON Semiconductor · 2019 — 2020"
+        techs={[
+          { icon: <ReactSvg />, text: "React" },
+          { icon: <NextJsSvg />, text: "Next" },
+          { icon: <SassSvg />, text: "SCSS" },
+        ]}
+        body={[
+          "At ON Semi, I saved $80k by adding a single JavaScript alert that stopped accidental purchase orders. Sometimes the best solutions are dumb.",
+          "At Multnomah, I built internal webapps with minimal supervision. Good training for figuring things out alone.",
+        ]}
+      />
     </div>
   </section>;
 }

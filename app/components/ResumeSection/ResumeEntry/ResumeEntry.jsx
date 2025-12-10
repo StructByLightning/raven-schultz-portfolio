@@ -62,13 +62,13 @@ export default function ResumeEntry({
   return <ScrollTriggeredAnimation animation={animate} className={css.resumeEntry} threshold={0.5}>
     <div className={`initialInvis ${css.verticalSeparator}`}></div>
 
-    <h3>{title}</h3>
-    <div className={css.subtitle}>{subtitle}</div>
-    <div className={css.body}>
+    <h3 className="initialInvis">{title}</h3>
+    <div className={`initialInvis ${css.subtitle}`}>{subtitle}</div>
+    <div className={`initialInvis ${css.body}`}>
       {body.map((paragraph, i) => <p key={i}>{splitIntoAnimatedSpans(paragraph)}</p>)}
     </div>
 
-    <div className={css.tech}>
+    <div className={`initialInvis ${css.tech}`}>
       {techs.map((tech) => <Chip icon={tech.icon} text={tech.text} key={tech.text} />)}
     </div>
   </ScrollTriggeredAnimation>;

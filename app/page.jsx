@@ -246,28 +246,6 @@ export default async function Home() {
 
 
 
-      <section className={css.experience}>
-        <div className="sectionInner">
-          <h2>Experience</h2>
-          <div className={css.timeline}>
-            {EXPERIENCE.map((entry) => <div className={css.entry} key={entry.company}>
-              <div className={css.year}><span>{entry.year}</span></div>
-              <div className={css.dot}></div>
-              <div className={css.body}>
-                <h3>{entry.title}</h3>
-                <div className={css.subheadline}>{entry.company}</div>
-                {entry.body}
-                <div className={css.skills}>{entry.skills.map((skill) => <div key={skill.label} className={css.skillTag}>
-                  {skill?.icon}
-                  <span>{skill?.label}</span>
-                </div>)}</div>
-              </div>
-              <div className={css.line}></div>
-            </div>)}
-          </div>
-        </div>
-      </section>
-
       <section className={css.about} id="about">
         <div className="sectionInner">
           <h2>About</h2>
