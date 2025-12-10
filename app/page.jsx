@@ -14,7 +14,6 @@ export const metadata = {
 
 export default async function Home() {
   return <>
-    <Navbar />
     <main className={css.main}>
       <FoldSection />
 

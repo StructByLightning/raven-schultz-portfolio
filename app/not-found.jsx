@@ -1,12 +1,5 @@
-import css from "./not-found.module.scss";
-import Navbar from "@/sections/navbar";
+import { redirect } from "next/navigation";
 
-export default function Test() {
-  return <>
-    <title>404 | Voidgoddess</title>
-    <Navbar/>
-    <main className={css.main}>
-      404 Not Found
-    </main>
-  </>;
+export default function NotFound() {
+  redirect("/");
 }
