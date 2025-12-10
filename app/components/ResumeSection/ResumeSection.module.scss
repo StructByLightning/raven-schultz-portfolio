@@ -4,36 +4,4 @@
   align-items: center;
 
   text-align: center;
-
-  .verticalSeparator{
-    width: 1px;
-    height: var(--spacing7);
-
-    background-color: var(--black);
-  }
-
-  h3{
-    margin: 0;
-
-    font-size: var(--fontSize3);
-
-    font-family: var(--capsFont);
-  }
-
-  .subtitle{
-    margin-top: var(--spacing3);
-  }
-
-  .body{
-    max-width: 800px;
-    margin-top: var(--spacing5);
-
-    p:first-child{
-      margin-top: 0;
-    }
-
-    p:last-child{
-      margin-bottom: 0;
-    }
-  }
 }
