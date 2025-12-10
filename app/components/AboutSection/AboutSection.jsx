@@ -47,12 +47,6 @@ export default function AboutSection() {
       <div className={`initialInvis ${css.text}`}>
         {paragraphs.map((text, i) => <p key={i}>{splitIntoAnimatedSpans(text)}</p>)}
       </div>
-
-      <div className={`initialInvis ${css.contact}`}>
-        <a href="mailto:msravenschultz@gmail.com">msravenschultz@gmail.com</a>
-        <span>·</span>
-        <a href="https://www.linkedin.com/in/ravenschultz/">linkedin.com/in/ravenschultz</a>
-      </div>
     </ScrollTriggeredAnimation>
   </section>;
 }
