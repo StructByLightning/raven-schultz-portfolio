@@ -27,14 +27,15 @@ section.projects > div{
 
     text-align: center;
 
-    .image{
-      overflow: hidden;
-
-      border-radius: var(--curve);
+    img{
+      width: 61vw;
+      max-width: 80rem;
+      height: auto;
     }
 
     h3{
       margin: 0;
+      margin-top: var(--spacing6);
 
       font-family: var(--capsFont);
     }

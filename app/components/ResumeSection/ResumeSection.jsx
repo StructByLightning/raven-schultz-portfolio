@@ -33,7 +33,7 @@ export default function ResumeSection() {
           { icon: <SassSvg />, text: "SCSS" },
         ]}
         body={[
-          "Eight months at a real estate company. The most interesting problem: their website was basically telling burglars which apartments were empty. I redesigned how availability was displayed, which cut break-in risk and saved $72k/year.",
+          "Eight months at a real estate company. The most interesting problem: their website was basically telling burglars which apartments were empty. I redesigned how availability was displayed, which cut break-in risk and ended up saving the company  $72k/year.",
           "Also spent time mentoring junior devs on prompt engineering and migrating a React app between third-party CMSes. Useful work, but not very interesting.",
         ]}
       />
@@ -48,7 +48,7 @@ export default function ResumeSection() {
           { icon: <SassSvg />, text: "SCSS" },
         ]}
         body={[
-          "Two and a half years as the web engineer generalist. Whatever needed building, I built.",
+          "Two and a half years as the web generalist. Whatever needed building, I built.",
           "The highlights: a puzzle game that hit 80k users, with complex animation and state management. A music marketplace redesign that boosted sessions by 40%. An AI prompt ecommerce marketplace from scratch. A component library that cut dev time by 40%. Business process automation that saved $40k.",
           "This is where I learned to ship fast and still care about craft.",
         ]}
