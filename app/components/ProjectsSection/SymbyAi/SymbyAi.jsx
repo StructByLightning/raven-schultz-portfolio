@@ -2,6 +2,7 @@ import { gsap } from "@/scripts/gsap";
 import DrawSVGPlugin from "@/scripts/gsap/DrawSVGPlugin";
 import ScrollTriggeredAnimation from "@/components/ScrollTriggeredAnimation/ScrollTriggeredAnimation";
 import SymbyInkSvg from "./symbyInk.svg";
+import css from "./SymbyAi.module.scss";
 
 gsap.registerPlugin(DrawSVGPlugin);
 
@@ -29,7 +30,8 @@ function createInkAnimation(target) {
 
 export default function SymbyAi() {
   return <ScrollTriggeredAnimation animation={createInkAnimation}>
-    hello world
-    <SymbyInkSvg />
+    <div className={css.container}>
+      <SymbyInkSvg />
+    </div>
   </ScrollTriggeredAnimation>;
 }
