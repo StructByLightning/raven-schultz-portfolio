@@ -1,0 +1,35 @@
+import { gsap } from "@/scripts/gsap";
+import DrawSVGPlugin from "@/scripts/gsap/DrawSVGPlugin";
+import ScrollTriggeredAnimation from "@/components/ScrollTriggeredAnimation/ScrollTriggeredAnimation";
+import SymbyInkSvg from "./symbyInk.svg";
+
+gsap.registerPlugin(DrawSVGPlugin);
+
+/**
+ * Creates the ink drawing animation timeline.
+ *
+ * @param target - The container element to query for paths
+ * @returns      GSAP timeline animating the ink paths
+ */
+function createInkAnimation(target) {
+  return gsap.timeline().fromTo(target.querySelectorAll("path.ink"),
+    {
+      drawSVG: "0 0",
+    },
+    {
+      drawSVG: "0% 100%",
+      duration: 2,
+      stagger: {
+        from: "random",
+        each: 0.01,
+      },
+    });
+}
+
+
+export default function SymbyAi() {
+  return <ScrollTriggeredAnimation animation={createInkAnimation}>
+    hello world
+    <SymbyInkSvg />
+  </ScrollTriggeredAnimation>;
+}
