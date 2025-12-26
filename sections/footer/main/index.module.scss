@@ -12,6 +12,10 @@
       display: flex;
       gap: var(--spacing8);
       justify-content: center;
+      @media (max-width: 900px){
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     a{
