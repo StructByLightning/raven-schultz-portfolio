@@ -3,6 +3,7 @@ import css from "./AboutSection.module.scss";
 import { gsap } from "@/scripts/gsap";
 import ScrollTriggeredAnimation from "@/components/ScrollTriggeredAnimation/ScrollTriggeredAnimation";
 import splitIntoAnimatedSpans from "@/scripts/utils/splitIntoAnimatedSpans";
+import Button from "@/components/Button/Button";
 
 
 function animate(root) {
@@ -26,6 +27,11 @@ function animate(root) {
     { opacity: 0 },
     { opacity: 1, ease: "sine.inOut", duration: 0.2, stagger: 0.05 });
 
+  //Fade in email button
+  tl.fromTo(root.querySelectorAll(`.${css.button}`),
+    { opacity: 0 },
+    { opacity: 1, ease: "sine.inOut", duration: 0.2 }, "<90%");
+
   return tl;
 }
 
@@ -46,6 +52,8 @@ export default function AboutSection() {
       <div className={`initialInvis ${css.text}`}>
         {paragraphs.map((text, i) => <p key={i}>{splitIntoAnimatedSpans(text)}</p>)}
       </div>
+      <Button className={`initialInvis ${css.button}`} href="mailto:msravenschultz@gmail.com">msravenschultz@gmail.com</Button>
+
     </ScrollTriggeredAnimation>
   </section>;
 }
