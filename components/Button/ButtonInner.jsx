@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import LoadingSvg from "@/public/icons/loading.svg";
 import css from "./Button.module.scss";
-import DiamondSvg from "./diamond.svg"
+import DiamondSvg from "./diamond.svg";
 
 
 

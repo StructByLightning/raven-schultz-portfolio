@@ -1,6 +1,6 @@
 "use client";
 
-import {useRef, useEffect} from "react";
+import { useRef, useEffect } from "react";
 
 /**
  * Wraps its children in a div and applies a GSAP animation when the div becomes visible in the viewport.
@@ -26,20 +26,17 @@ export default function ScrollTriggeredAnimation({
       const newTimeline = animation(target);
       newTimeline.pause(0);
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              newTimeline.play(0);
-              observer.unobserve(target);
-            }
-          });
-        },
-        {
-          threshold,
-          rootMargin,
-        }
-      );
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            newTimeline.play(0);
+            observer.unobserve(target);
+          }
+        });
+      }, {
+        threshold,
+        rootMargin,
+      });
 
       observer.observe(target);
 
