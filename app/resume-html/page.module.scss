@@ -1,0 +1,94 @@
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  .resume{
+    width: 8.5in;
+    height: 11in;
+
+    font-size: var(--fontSize1);
+
+    line-height: 1.3em;
+
+    border: 1px solid red;
+    @media print{border: none;}
+
+    .header{
+      display: flex;
+      flex-direction: column;
+      padding: var(--spacing6);
+
+      color: var(--cream);
+      text-align: center;
+
+      background-color: var(--black);
+
+      .name{
+        font-size: var(--fontSize6);
+        line-height: var(--lineHeight);
+      }
+
+      .title{
+        margin-top: var(--spacing2);
+
+        font-size: var(--fontSize3);
+        font-family: var(--capsFont);
+      }
+
+      .links{
+        display: flex;
+        align-self: stretch;
+        justify-content: space-between;
+        margin-top: var(--spacing6);
+
+
+        a{
+          color: var(--cream);
+          font-size: var(--fontSize1);
+          text-decoration: none;
+        }
+      }
+    }
+
+    .jobs{
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing6);
+      padding: var(--spacing6);
+      .job{
+        .title{
+          font-size: var(--fontSize2);
+          font-family: var(--capsFont);
+        }
+
+        .tenure{
+          display: flex;
+          margin-top: var(--spacing3);
+          margin-bottom: var(--spacing4);
+
+          font-size: var(--fontSize2);
+        }
+      }
+    }
+
+    .ats{
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing5);
+
+      font-size: var(--fontSize0);
+      text-align: center;
+
+      .heading{
+        font-family: var(--capsFont);
+      }
+
+      .keywords{
+        line-height: 1.3em;
+      }
+    }
+  }
+}

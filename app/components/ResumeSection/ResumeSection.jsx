@@ -11,7 +11,7 @@ export default function ResumeSection() {
     <div className="sectionInner">
       <h2>Experience</h2>
       <ResumeEntry
-        title="Lead Frontend Engineer"
+        title="Lead Design Engineer"
         subtitle="SymbyAI · 2024 — Present"
         techs={[
           { icon: <ReactSvg />, text: "React" },
@@ -25,7 +25,7 @@ export default function ResumeSection() {
       />
 
       <ResumeEntry
-        title="Full Stack Engineer"
+        title="Frontend Engineer"
         subtitle="Westland Real Estate Group · 2024 — 2024"
         techs={[
           { icon: <ReactSvg />, text: "React" },
