@@ -6,10 +6,21 @@
   height: 100vh;
   margin: 0;
   padding: 0;
+  @media print{
+    display: block;
+    width: auto;
+    height: auto;
 
+    .resume{
+      border: none;
+    }
+  }
 
   .resume{
+    display: flex;
+    flex-direction: column;
     width: 8.5in;
+    min-width: 8.5in;
     height: 11in;
     margin: 0;
     padding: 0;
@@ -62,6 +73,13 @@
       }
     }
 
+    .atsText{
+      margin: 0;
+
+      color: var(--cream);
+
+      font-size: 0.1px;
+    }
     .jobs{
       display: flex;
       flex-direction: column;
@@ -117,18 +135,6 @@
       p{
         margin: 0;
       }
-    }
-
-    .atsText{
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      padding: 0;
-      overflow: hidden;
-
-      border: 0;
-
-      clip: rect(0, 0, 0, 0);
     }
   }
 }

@@ -27,14 +27,14 @@ export default async function Resume() {
         </header>
 
         <section className={css.jobs} aria-labelledby="experience-heading">
-          {/*<h2 id="experience-heading" className={css.atsText}>Professional Experience:</h2> */}
 
 
           <article className={css.job}>
+            <h2 id="experience-heading" className={css.atsText}>Work History</h2>
             <header>
               <h3 className={css.title}>Lead Design Engineer (Remote)</h3>
               <p className={css.tenure}>
-                <span className={css.company}>SymbyAI · August 2024—Present</span>
+                <span className={css.company}>SymbyAI · 08/2024 — Present</span>
               </p>
             </header>
             <ul className={css.accomplishments}>
@@ -51,7 +51,7 @@ export default async function Resume() {
             <header>
               <h3 className={css.title}>Frontend Engineer (Remote)</h3>
               <p className={css.tenure}>
-                <span className={css.company}>Westland Real Estate Group · 2024—2024</span>
+                <span className={css.company}>Westland Real Estate Group · 01/2024 — 08/2024</span>
               </p>
             </header>
             <ul className={css.accomplishments}>
@@ -66,7 +66,7 @@ export default async function Resume() {
             <header>
               <h3 className={css.title}>Full Stack Engineer (Remote)</h3>
               <p className={css.tenure}>
-                <span className={css.company}>Deviate Labs · 2021—2023</span>
+                <span className={css.company}>Deviate Labs · 03/2021 — 11/2023</span>
               </p>
             </header>
             <ul className={css.accomplishments}>
@@ -84,7 +84,7 @@ export default async function Resume() {
             <header>
               <h3 className={css.title}>Full Stack Engineer Intern</h3>
               <p className={css.tenure}>
-                <span className={css.company}>Multnomah ESD · ON Semiconductor · 2019-2020</span>
+                <span className={css.company}>Multnomah ESD · ON Semiconductor · 03/2019 — 09/2020</span>
               </p>
             </header>
             <ul className={css.accomplishments}>
