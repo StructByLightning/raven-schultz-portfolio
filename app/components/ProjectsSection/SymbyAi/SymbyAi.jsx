@@ -13,18 +13,22 @@ gsap.registerPlugin(DrawSVGPlugin);
  * @returns      GSAP timeline animating the ink paths
  */
 function createInkAnimation(target) {
-  return gsap.timeline().fromTo(target.querySelectorAll("path.ink"),
-    {
-      drawSVG: "0 0",
-    },
-    {
-      drawSVG: "0% 100%",
-      duration: 2,
-      stagger: {
-        from: "random",
-        each: 0.01,
-      },
-    });
+  const paths = [...target.querySelectorAll("path.ink")].sort(() => Math.random() - 0.5);
+  const tl = gsap.timeline();
+
+  let offset = 0;
+  for (const path of paths) {
+    const length = path.getTotalLength();
+    const duration = length / 500;
+
+    tl.fromTo(path,
+      { drawSVG: "0 0" },
+      { drawSVG: "0% 100%", duration },
+      offset);
+    offset += 0.01;
+  }
+
+  return tl;
 }
 
 
