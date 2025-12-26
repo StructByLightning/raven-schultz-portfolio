@@ -1,10 +1,9 @@
 "use client";
-import css from "./ProjectsSection.module.scss";
-import Picture from "@/components/picture";
+import {gsap} from "@/scripts/gsap";
+import ProjectImage from "@/app/components/ProjectsSection/ProjectImage";
 import ScrollTriggeredAnimation from "@/components/ScrollTriggeredAnimation/ScrollTriggeredAnimation";
 import splitIntoAnimatedSpans from "@/scripts/utils/splitIntoAnimatedSpans";
-import { gsap } from "@/scripts/gsap";
-import SymbyAi from "@/app/components/ProjectsSection/SymbyAi/SymbyAi";
+import css from "./ProjectsSection.module.scss";
 
 
 const PROJECTS = [
@@ -22,29 +21,29 @@ const PROJECTS = [
     ],
     subtitle: "AI-powered peer review for academic research",
   },
-  // {
-  //   alt: "The X Marks the Site infinite art puzzle game.",
-  //   image: "/images/cards/xmarksthesite/xmarksthesite",
-  //   name: "X Marks the Site",
-  //   paragraphs: [
-  //     "A marketing campaign for a band. The concept: an infinite-zoom art piece, looping seamlessly, with clickable objects hidden throughout. Find an object, solve a puzzle, earn raffle entries. Most puzzles were music trivia. Some were ciphers, Braille art, obscure audio equipment. The kind of thing that rewards obsessive attention.",
-  //     "I'd never done canvas animation before this project. The zoom needed to loop perfectly with no visible seam and no jerk when it looped. That took a while to get right. But the harder problem was subtler: when you scale something down naively in the browser, the center gets glittery. Pixels fight each other.",
-  //     "The other thing nobody warns you about: linear scaling produces a nonlinear visual effect. If you shrink a frame at a constant rate, it doesn't look constant. The motion feels wrong and you can't immediately tell why. I had to adjust the speed dynamically as each frame shrank to make the zoom feel smooth.",
-  //     "80,000 people played. It didn't translate to album sales, but that's marketing for you.",
-  //   ],
-  //   subtitle: "An interactive puzzle game for the band A Bad Think",
-  // },
-  // {
-  //   alt: "The IAA homepage.",
-  //   image: "/images/cards/immersiveaudioalbum/immersiveaudioalbum",
-  //   name: "Immersive Audio Album",
-  //   paragraphs: [
-  //     "A marketplace where musicians keep most of what they earn. The inverse of the typical platform cut. It was growing, but the site was a cheap template that screamed \"we're not serious.\" Potential partners took one look and walked away.",
-  //     "My job was to make it look like something that belonged. Modern, artistic, the kind of site that makes you trust what you're buying. The initial designs I got were concepts, not solutions. Good ideas, flat execution. Static layouts that would have looked fine and felt forgettable. I took them and rebuilt them into something with motion: parallax, gradients, animated transitions. I drew new hero art for most of the pages.",
-  //     "Sessions increased 40%. More importantly, the deals started closing.",
-  //   ],
-  //   subtitle: "A music marketplace for independent artists",
-  // },
+  {
+    alt: "The X Marks the Site infinite art puzzle game.",
+    image: "/images/cards/xmarksthesite/xmarksthesite",
+    name: "X Marks the Site",
+    paragraphs: [
+      "A marketing campaign for a band. The concept: an infinite-zoom art piece, looping seamlessly, with clickable objects hidden throughout. Find an object, solve a puzzle, earn raffle entries. Most puzzles were music trivia. Some were ciphers, Braille art, obscure audio equipment. The kind of thing that rewards obsessive attention.",
+      "I'd never done canvas animation before this project. The zoom needed to loop perfectly with no visible seam and no jerk when it looped. That took a while to get right. But the harder problem was subtler: when you scale something down naively in the browser, the center gets glittery. Pixels fight each other.",
+      "The other thing nobody warns you about: linear scaling produces a nonlinear visual effect. If you shrink a frame at a constant rate, it doesn't look constant. The motion feels wrong and you can't immediately tell why. I had to adjust the speed dynamically as each frame shrank to make the zoom feel smooth.",
+      "80,000 people played. It didn't translate to album sales, but that's marketing for you.",
+    ],
+    subtitle: "An interactive puzzle game for the band A Bad Think",
+  },
+  {
+    alt: "The IAA homepage.",
+    image: "/images/cards/immersiveaudioalbum/immersiveaudioalbum",
+    name: "Immersive Audio Album",
+    paragraphs: [
+      "A marketplace where musicians keep most of what they earn. The inverse of the typical platform cut. It was growing, but the site was a cheap template that screamed \"we're not serious.\" Potential partners took one look and walked away.",
+      "My job was to make it look like something that belonged. Modern, artistic, the kind of site that makes you trust what you're buying. The initial designs I got were concepts, not solutions. Good ideas, flat execution. Static layouts that would have looked fine and felt forgettable. I took them and rebuilt them into something with motion: parallax, gradients, animated transitions. I drew new hero art for most of the pages.",
+      "Sessions increased 40%. More importantly, the deals started closing.",
+    ],
+    subtitle: "A music marketplace for independent artists",
+  },
 ];
 
 /**
@@ -55,15 +54,15 @@ const PROJECTS = [
 function animateHeader(root) {
   const tl = gsap.timeline();
 
-  tl.set(root.querySelectorAll(".initialInvis"), { visibility: "visible" });
+  tl.set(root.querySelectorAll(".initialInvis"), {visibility: "visible"});
 
   tl.fromTo(root.querySelector("h2"),
-    { opacity: 0, translateY: "-15%" },
-    { opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2 });
+    {opacity: 0, translateY: "-15%"},
+    {opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2});
 
   tl.fromTo(root.querySelector(`.${css.subtitle}`),
-    { opacity: 0, translateY: "-15%" },
-    { opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2 },
+    {opacity: 0, translateY: "-15%"},
+    {opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2},
     "<70%");
 
   return tl;
@@ -77,29 +76,23 @@ function animateHeader(root) {
 function animateProject(root) {
   const tl = gsap.timeline();
 
-  tl.set(root.querySelectorAll(".initialInvis"), { visibility: "visible" });
-
-  //Image scales up from slightly smaller
-  tl.fromTo(root.querySelector(`.${css.image}`),
-    { opacity: 0, scale: 0.95 },
-    { opacity: 1, scale: 1, ease: "sine.inOut", duration: 0.3 });
+  tl.set(root.querySelectorAll(".initialInvis"), {visibility: "visible"});
 
   //Title fades in
   tl.fromTo(root.querySelector("h3"),
-    { opacity: 0, translateY: "-15%" },
-    { opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2 },
-    "<70%");
+    {opacity: 0, translateY: "-15%"},
+    {opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2});
 
   //Subtitle fades in
   tl.fromTo(root.querySelector(`.${css.subtitle}`),
-    { opacity: 0, translateY: "-15%" },
-    { opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2 },
+    {opacity: 0, translateY: "-15%"},
+    {opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2},
     "<70%");
 
   //Text spans stagger in
   tl.fromTo(root.querySelectorAll(`.${css.text} span`),
-    { opacity: 0, translateY: "-15%" },
-    { opacity: 1, translateY: "0%", ease: "sine.inOut", stagger: 0.01, duration: 0.1 },
+    {opacity: 0, translateY: "-15%"},
+    {opacity: 1, translateY: "0%", ease: "sine.inOut", stagger: 0.01, duration: 0.1},
     "<70%");
 
   return tl;
@@ -122,17 +115,7 @@ export default function ProjectsSection() {
         key={project.name}
         threshold={0.2}
       >
-        <div className={`initialInvis ${css.image}`}>
-          <SymbyAi />
-          {/* <img src="/symbyInk.png" alt="" /> */}
-          {/* <Picture
-            alt={project.alt}
-            base={project.image}
-            exts={["webp", "png"]}
-            sizes="max-width:1300px 50vw, max-width: 700px 100vw, 33vw"
-            widths={[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]}
-          /> */}
-        </div>
+        <ProjectImage alt={project.alt} base={project.image} />
         <h3 className="initialInvis">{project.name}</h3>
         <div className={`initialInvis ${css.subtitle}`}>{project.subtitle}</div>
         <div className={`initialInvis ${css.text}`}>
