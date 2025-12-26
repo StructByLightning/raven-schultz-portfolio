@@ -1,20 +1,6 @@
 "use client";
-import UbuntuSvg from "@/public/icons/ubuntu.svg";
-import Html5Svg from "@/public/icons/html5.svg";
-import CodePullRequestSvg from "@/public/icons/code-pull-request.svg";
-import DockerSvg from "@/public/icons/docker.svg";
-import GsapSvg from "@/public/icons/gsap.svg";
-import NextJsSvg from "@/public/icons/next-js.svg";
-import JavascriptSvg from "@/public/icons/javascript.svg";
-import DatabaseSvg from "@/public/icons/database.svg";
-import StrapiSvg from "@/public/icons/strapi.svg";
-import JestSvg from "@/public/icons/jest.svg";
-import GcpSvg from "@/public/icons/gcp.svg";
-import NodeJsSvg from "@/public/icons/node-js.svg";
 import css from "./ResumeEntry.module.scss";
 import Chip from "@/components/Chip/Chip";
-import SassSvg from "@/public/icons/sass.svg";
-import ReactSvg from "@/public/icons/react.svg";
 import ScrollTriggeredAnimation from "@/components/ScrollTriggeredAnimation/ScrollTriggeredAnimation";
 import { gsap } from "@/scripts/gsap";
 import splitIntoAnimatedSpans from "@/scripts/utils/splitIntoAnimatedSpans";
@@ -47,7 +33,7 @@ function animate(root) {
     opacity: 1,
     ease: "sine.inOut",
     duration: 0.2,
-    stagger: 0.05,
+    stagger: { each: 0.05, from: "center" },
   });
 
   return tl;
