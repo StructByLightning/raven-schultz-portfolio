@@ -55,6 +55,7 @@ async function main() {
       format: "Letter",
       path: OUTPUT_PATH,
       printBackground: true,
+      tagged: true,
     });
 
     console.log("Done!");

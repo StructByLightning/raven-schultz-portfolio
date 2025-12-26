@@ -4,10 +4,15 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+
 
   .resume{
     width: 8.5in;
     height: 11in;
+    margin: 0;
+    padding: 0;
 
     font-size: var(--fontSize1);
 
@@ -27,12 +32,16 @@
       background-color: var(--black);
 
       .name{
+        margin: 0;
+
+        color: var(--cream);
         font-size: var(--fontSize6);
-        line-height: var(--lineHeight);
+        font-family: var(--primaryFont);
+        line-height: 1.3em;
       }
 
       .title{
-        margin-top: var(--spacing2);
+        margin: var(--spacing2) 0 0 0;
 
         font-size: var(--fontSize3);
         font-family: var(--capsFont);
@@ -60,16 +69,23 @@
       padding: var(--spacing6);
       .job{
         .title{
+          margin: 0;
+
           font-size: var(--fontSize2);
           font-family: var(--capsFont);
+          line-height: 1em;
         }
 
         .tenure{
           display: flex;
-          margin-top: var(--spacing3);
-          margin-bottom: var(--spacing4);
+          margin-top: var(--spacing2);
+          margin-bottom: var(--spacing3);
 
           font-size: var(--fontSize2);
+        }
+
+        ul{
+          margin: 0;
         }
       }
     }
@@ -78,17 +94,41 @@
       display: flex;
       flex-direction: column;
       gap: var(--spacing5);
+      padding: var(--spacing6);
 
       font-size: var(--fontSize0);
       text-align: center;
 
+      section{
+        display: flex;
+        flex-direction: column;
+      }
+
       .heading{
+        margin: 0 0 var(--spacing2) 0;
+
+        font-size: var(--fontSize0);
         font-family: var(--capsFont);
       }
 
       .keywords{
         line-height: 1.3em;
       }
+      p{
+        margin: 0;
+      }
+    }
+
+    .atsText{
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+
+      border: 0;
+
+      clip: rect(0, 0, 0, 0);
     }
   }
 }
