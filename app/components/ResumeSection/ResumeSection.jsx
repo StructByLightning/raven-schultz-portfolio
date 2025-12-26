@@ -1,15 +1,40 @@
+"use client";
 import css from "./ResumeSection.module.scss";
+import { gsap } from "@/scripts/gsap";
 import NextJsSvg from "@/public/icons/next-js.svg";
 import NodeJsSvg from "@/public/icons/node-js.svg";
 import ReactSvg from "@/public/icons/react.svg";
-import SassSvg from "@/public/icons/sass.svg";
 import ResumeEntry from "@/app/components/ResumeSection/ResumeEntry/ResumeEntry";
+import SassSvg from "@/public/icons/sass.svg";
+import ScrollTriggeredAnimation from "@/components/ScrollTriggeredAnimation/ScrollTriggeredAnimation";
 
+/**
+ * Animates the Experience header on scroll.
+ *
+ * @param root - The root element containing the header
+ * @returns    The GSAP timeline
+ */
+function animateHeader(root) {
+  const tl = gsap.timeline();
 
+  tl.set(root.querySelectorAll(".initialInvis"), { visibility: "visible" });
+
+  tl.fromTo(root.querySelector("h2"),
+    { opacity: 0, translateY: "-15%" },
+    { opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2 });
+
+  return tl;
+}
+
+/**
+ * Experience/resume section with animated job entries.
+ */
 export default function ResumeSection() {
   return <section className={css.resumeSection}>
     <div className="sectionInner">
-      <h2>Experience</h2>
+      <ScrollTriggeredAnimation animation={animateHeader} className={css.header} threshold={0.5}>
+        <h2 className="initialInvis">Experience</h2>
+      </ScrollTriggeredAnimation>
       <ResumeEntry
         title="Lead Design Engineer"
         subtitle="SymbyAI · 2024 — Present"
