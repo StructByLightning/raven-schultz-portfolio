@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-resume": "node npm-scripts/generate-resume-pdf.mjs"
   },
   "dependencies": {
     "@svgr/webpack": "^8.0.1",
