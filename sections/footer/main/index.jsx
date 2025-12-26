@@ -1,21 +1,49 @@
+"use client";
 import Button from "@/components/Button/Button";
 import css from "./index.module.scss";
-import FilePdfSvg from "@/public/icons/file-pdf.svg";
-import GithubLogoSvg from "@/public/icons/github-logo.svg";
+import { gsap } from "@/scripts/gsap";
+import ScrollTriggeredAnimation from "@/components/ScrollTriggeredAnimation/ScrollTriggeredAnimation";
 
-export default function Footer({ }) {
-  return <footer className={css.footer}>
-    <div className="sectionInner">
-      <div className={css.row}>
+/**
+ * Animates the footer content on scroll.
+ *
+ * @param root - The root element containing the footer
+ * @returns    The GSAP timeline
+ */
+function animate(root) {
+  const tl = gsap.timeline();
+
+  tl.set(root.querySelectorAll(".initialInvis"), { visibility: "visible" });
+
+  //Fade in location text
+  tl.fromTo(root.querySelector(`.${css.row}:first-child`),
+    { opacity: 0, translateY: "-15%" },
+    { opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2 });
+
+  //Stagger in contact buttons
+  tl.fromTo(root.querySelectorAll(`.${css.row}:last-child > *`),
+    { opacity: 0, translateY: "-15%" },
+    { opacity: 1, translateY: "0%", ease: "sine.inOut", stagger: 0.05, duration: 0.2 },
+    "<70%");
+
+  return tl;
+}
+
+/**
+ * Footer with contact links and location.
+ */
+export default function Footer() {
+  return <footer className={css.footer} id="contact">
+    <ScrollTriggeredAnimation animation={animate} className="sectionInner" threshold={0.5}>
+      <div className={`initialInvis ${css.row}`}>
         <span>Raven Schultz · Seattle, WA</span>
       </div>
-      <div className={css.row}>
-
+      <div className={`initialInvis ${css.row}`}>
         <Button href="https://www.linkedin.com/in/ravenschultz/">LinkedIn</Button>
-        <Button href="github.com/StructByLightning">Github</Button>
+        <Button href="https://github.com/StructByLightning">Github</Button>
         <Button href="">Resume</Button>
         <Button href="mailto:msravenschultz@gmail.com">msravenschultz@gmail.com</Button>
       </div>
-    </div>
+    </ScrollTriggeredAnimation>
   </footer>;
 }
