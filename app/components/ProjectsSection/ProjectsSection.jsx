@@ -1,6 +1,6 @@
 "use client";
-import {gsap} from "@/scripts/gsap";
-import ProjectImage from "@/app/components/ProjectsSection/ProjectImage";
+import { gsap } from "@/scripts/gsap";
+import ProjectImage, { animateProjectImage } from "@/app/components/ProjectsSection/ProjectImage";
 import ScrollTriggeredAnimation from "@/components/ScrollTriggeredAnimation/ScrollTriggeredAnimation";
 import splitIntoAnimatedSpans from "@/scripts/utils/splitIntoAnimatedSpans";
 import css from "./ProjectsSection.module.scss";
@@ -54,15 +54,15 @@ const PROJECTS = [
 function animateHeader(root) {
   const tl = gsap.timeline();
 
-  tl.set(root.querySelectorAll(".initialInvis"), {visibility: "visible"});
+  tl.set(root.querySelectorAll(".initialInvis"), { visibility: "visible" });
 
   tl.fromTo(root.querySelector("h2"),
-    {opacity: 0, translateY: "-15%"},
-    {opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2});
+    { opacity: 0, translateY: "-15%" },
+    { opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2 });
 
   tl.fromTo(root.querySelector(`.${css.subtitle}`),
-    {opacity: 0, translateY: "-15%"},
-    {opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2},
+    { opacity: 0, translateY: "-15%" },
+    { opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2 },
     "<70%");
 
   return tl;
@@ -76,23 +76,27 @@ function animateHeader(root) {
 function animateProject(root) {
   const tl = gsap.timeline();
 
-  tl.set(root.querySelectorAll(".initialInvis"), {visibility: "visible"});
+  //Image animation (border draw + fade)
+  tl.set(root.querySelectorAll(".initialInvis"), { visibility: "visible" });
+  animateProjectImage(tl, root);
+
 
   //Title fades in
   tl.fromTo(root.querySelector("h3"),
-    {opacity: 0, translateY: "-15%"},
-    {opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2});
+    { opacity: 0, translateY: "-15%" },
+    { opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2 },
+    "<50%");
 
   //Subtitle fades in
   tl.fromTo(root.querySelector(`.${css.subtitle}`),
-    {opacity: 0, translateY: "-15%"},
-    {opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2},
+    { opacity: 0, translateY: "-15%" },
+    { opacity: 1, translateY: "0%", ease: "sine.inOut", duration: 0.2 },
     "<70%");
 
   //Text spans stagger in
   tl.fromTo(root.querySelectorAll(`.${css.text} span`),
-    {opacity: 0, translateY: "-15%"},
-    {opacity: 1, translateY: "0%", ease: "sine.inOut", stagger: 0.01, duration: 0.1},
+    { opacity: 0, translateY: "-15%" },
+    { opacity: 1, translateY: "0%", ease: "sine.inOut", stagger: 0.01, duration: 0.1 },
     "<70%");
 
   return tl;
