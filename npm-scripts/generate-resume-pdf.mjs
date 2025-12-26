@@ -50,6 +50,26 @@ async function main() {
     console.log(`Navigating to ${URL}...`);
     await page.goto(URL, {waitUntil: "networkidle"});
 
+    //Scroll through page to trigger intersection observer animations
+    await page.evaluate(async() => {
+      await new Promise((resolve) => {
+        let totalHeight = 0;
+        const distance = 200;
+        const timer = setInterval(() => {
+          window.scrollBy(0, distance);
+          totalHeight += distance;
+          if (totalHeight >= document.body.scrollHeight) {
+            clearInterval(timer);
+            window.scrollTo(0, 0);
+            resolve();
+          }
+        }, 100);
+      });
+    });
+
+    //Wait for animations to complete
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     console.log(`Generating PDF at ${OUTPUT_PATH}...`);
     await page.pdf({
       format: "Letter",
