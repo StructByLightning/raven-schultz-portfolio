@@ -39,9 +39,9 @@ export default function Footer() {
         <span>Raven Schultz · Seattle, WA</span>
       </div>
       <div className={`initialInvis ${css.row}`}>
-        <Button href="https://www.linkedin.com/in/ravenschultz/">LinkedIn</Button>
-        <Button href="https://github.com/StructByLightning">Github</Button>
-        <Button href="">Resume</Button>
+        <Button href="https://www.linkedin.com/in/ravenschultz/" target="_blank">LinkedIn</Button>
+        <Button href="https://github.com/StructByLightning" target="_blank">Github</Button>
+        <Button href="/ravenSchultzResume.pdf" target="_blank">Resume</Button>
         <Button href="mailto:msravenschultz@gmail.com">msravenschultz@gmail.com</Button>
       </div>
     </ScrollTriggeredAnimation>
