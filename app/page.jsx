@@ -5,11 +5,10 @@ import ResumeSection from "@/app/components/ResumeSection/ResumeSection";
 import ExpandingHr from "@/components/ExpandingHr/ExpandingHr";
 import css from "./page.module.scss";
 import Footer from "@/sections/footer/main";
-import Navbar from "@/sections/navbar";
 
 export const metadata = {
-  title: "Raven Schultz | Portfolio",
-  description: "I'm a Full-stack Design and React Engineer. I help companies eliminate the painful back-and-forth between designers and developers by handling both roles, ensuring fast delivery and pixel-perfect implementation.",
+  title: "Raven Schultz",
+  description: "Most teams have designers who can't code and developers who can't design. I do both. Design Engineer in Seattle.",
 };
 
 export default async function Home() {
