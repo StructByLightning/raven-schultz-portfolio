@@ -117,6 +117,12 @@
       font-size: var(--fontSize0);
       text-align: center;
 
+      .row{
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing9);
+      }
+
       section{
         display: flex;
         flex-direction: column;

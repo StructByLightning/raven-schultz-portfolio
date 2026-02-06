@@ -7,7 +7,7 @@ export const metadata = {
   description: "I'm a Full-stack Design and React Engineer. I help companies eliminate the painful back-and-forth between designers and developers by handling both roles, ensuring fast delivery and pixel-perfect implementation.",
 };
 
-export default async function Resume() {
+export default async function FioraResume() {
   if (process.env.NODE_ENV === "production") {
     notFound();
   }
@@ -97,13 +97,15 @@ export default async function Resume() {
         <ExpandingHr />
 
         <footer className={css.ats}>
-          <section aria-labelledby="education-heading">
-            <h2 id="education-heading" className={css.heading}>Education</h2>
-            <p>BS. Computer Science, Portland State University</p>
-          </section>
+          <div className={css.row}>
+            <section aria-labelledby="education-heading">
+              <h2 id="education-heading" className={css.heading}>Education</h2>
+              <p>BS. Computer Science, Portland State University · US Citizen</p>
+            </section>
+          </div>
           <section aria-labelledby="skills-heading">
             <h2 id="skills-heading" className={css.heading}>Keywords</h2>
-            <p className={css.keywords}>AI-Augmented Development, AWS, Agentic AI Workflows, Agile, Animation, CSS, Canvas API, ChatGPT, Chrome DevTools Debugging, Claude Code, Continue, Cross-Browser Compatibility, Design Systems, Docker, Figma, Firebase, GCP, GSAP, Git, Git Workflows, Github, GraphQL, HTML5, Interaction Design, Javascript (ES6+), Jest, Lighthouse, Linear, Material Design, Midjourney, Mixpanel, Mobile First Design, NPM, Next.js, Node.js, Notion, Performance Optimization, Progressive Web Apps (PWA), Prompt Engineering, Puppeteer, REST APIs, React, Responsive Design, SCSS, SEO, SQL, SSR/SSG, Typescript, UI/UX, Vercel, Web Accessibility/A11y, Webpack</p>
+            <p className={css.keywords}>AI-Augmented Development, AWS, Agentic AI Workflows, Agile, Animation, CSS, Canvas API, ChatGPT, Chrome DevTools Debugging, Claude Code, Continue, Cross-Browser Compatibility, Design Systems, Docker, Figma, Firebase, GCP, GSAP, Git, Git Workflows, Github, GraphQL, HTML5, Interaction Design, Javascript (ES6+), Jest, Lighthouse, Linear, LLMs, Material Design, Midjourney, Mixpanel, Mobile First Design, NPM, Next.js, Node.js, Notion, Performance Optimization, Progressive Web Apps (PWA), Prompt Engineering, Puppeteer, REST APIs, React, Responsive Design, SCSS, SEO, SQL, SSR/SSG, Typescript, User Experience (UX), User Interface (UI), Vercel, Web Accessibility/A11y, Webpack</p>
           </section>
         </footer>
       </article>
