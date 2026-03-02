@@ -37,3 +37,6 @@ next-env.d.ts
 .env
 
 resume.pdf
+
+.playwright-mcp
+.claude
