@@ -70,11 +70,14 @@ export default async function FioraResume() {
               </p>
             </header>
             <ul className={css.accomplishments}>
-              <li>Created comprehensive design library with Next.js and SCSS, cutting development time for new landing pages by 40%</li>
+              {/*<li>Created comprehensive design library with Next.js and SCSS, cutting development time for new landing pages by 40%</li> */}
+              <li>Rebuilt unstructured corporate site into modular Next.js component library; engineers could assemble new marketing pages from templated sections instead of copy-pasting raw HTML</li>
               <li>Designed and engineered interactive puzzle game (80k users) with seamless infinite-zoom canvas animation</li>
-              <li>Increased marketplace sessions by 40% through UX research and whole-site redesign</li>
+              {/*<li>Increased marketplace sessions by 40% through UX research and whole-site redesign</li> */}
+              <li>Redesigned marketplace from stock WordPress template into a polished storefront matching premium audiophile audience; 40% increase in sessions</li>
               <li>Built automated lead scraping and list cleaning pipeline; saved $40k/year in acquisition costs</li>
-              <li>Inherited spaghetti SaaS codebase; refactored and tested, reducing errors by 90% and improving performance</li>
+              {/*<li>Inherited spaghetti SaaS codebase; refactored and tested, reducing errors by 90% and improving performance</li> */}
+              <li>Rewrote analytics SaaS plugin and server pipeline with comprehensive unit and integration testing; customer error tickets dropped 90%, enabling 10x revenue growth</li>
               <li>Optimized corporate site to 95th percentile Lighthouse performance</li>
             </ul>
           </article>
@@ -89,12 +92,12 @@ export default async function FioraResume() {
             </header>
             <ul className={css.accomplishments}>
               <li>Decreased app loading times by 90% by implementing SQL request caching</li>
-              <li>Saved $80,000 by adding a Javascript alert to unnecessary and expensive purchase orders</li>
+              <li>Built purchase-order validation against existing inventory, preventing duplicate orders on high-cost fab parts; ~$80k savings</li>
             </ul>
           </article>
         </section>
 
-        <ExpandingHr />
+        <hr />
 
         <footer className={css.ats}>
           <div className={css.row}>
