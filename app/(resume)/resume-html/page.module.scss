@@ -19,6 +19,7 @@
   .resume{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 8.5in;
     min-width: 8.5in;
     height: 11in;
@@ -35,7 +36,7 @@
     .header{
       display: flex;
       flex-direction: column;
-      padding: var(--spacing6);
+      padding: var(--spacing7) var(--spacing8) var(--spacing6) var(--spacing8);
 
       color: var(--cream);
       text-align: center;
@@ -46,7 +47,7 @@
         margin: 0;
 
         color: var(--cream);
-        font-size: var(--fontSize6);
+        font-size: var(--fontSize5);
         font-family: var(--primaryFont);
         line-height: 1.3em;
       }
@@ -54,22 +55,21 @@
       .title{
         margin: var(--spacing2) 0 0 0;
 
-        font-size: var(--fontSize3);
+        font-size: var(--fontSize2);
         font-family: var(--capsFont);
       }
 
       .links{
         display: flex;
+        gap: var(--spacing3);
         align-self: stretch;
-        justify-content: space-between;
-        margin-top: var(--spacing6);
-
-        font-family: var(--monospaceFont);
+        justify-content: center;
+        margin-top: var(--spacing5);
 
 
         a{
           color: var(--cream);
-          font-size: var(--fontSize0);
+          font-size: var(--fontSize1);
           text-decoration: none;
         }
       }
@@ -86,18 +86,29 @@
       display: flex;
       flex-direction: column;
       gap: var(--spacing6);
-      padding: var(--spacing6);
+      padding: var(--spacing6) var(--spacing8);
+
       .job{
         .title{
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
           margin: 0;
 
           font-size: var(--fontSize1);
           font-family: var(--capsFont);
           line-height: 1em;
+          letter-spacing: 0;
+        }
+        .date{
+          margin-left: var(--spacing4);
+
+          font-size: var(--fontSize0);
         }
 
         .tenure{
           display: flex;
+          align-items: baseline;
           margin-top: var(--spacing2);
           margin-bottom: var(--spacing3);
 
@@ -114,7 +125,7 @@
       box-sizing: border-box;
       height: 1px;
       min-height: 1px;
-      margin: 0 var(--spacing6);
+      margin: 0 var(--spacing8);
 
       background-color: var(--black);
       border: none;
@@ -124,10 +135,12 @@
       display: flex;
       flex-direction: column;
       gap: var(--spacing5);
-      padding: var(--spacing6) var(--spacing6)  0 var(--spacing6);
+      padding: var(--spacing6) var(--spacing8) var(--spacing7) var(--spacing8);
+
 
       font-size: var(--fontSize0);
       text-align: center;
+
 
       .row{
         display: flex;
@@ -143,11 +156,13 @@
       .heading{
         margin: 0 0 var(--spacing2) 0;
 
+
         font-size: var(--fontSize0);
         font-family: var(--capsFont);
       }
 
       .keywords{
+        font-size: calc(var(--fontSize1) / 1.618);
         line-height: 1.3em;
       }
       p{
