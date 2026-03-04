@@ -36,7 +36,7 @@ export default function Footer() {
   return <footer className={css.footer} id="contact">
     <ScrollTriggeredAnimation animation={animate} className="sectionInner" threshold={0.5}>
       <div className={`initialInvis ${css.row}`}>
-        <span>Raven Schultz · Seattle, WA</span>
+        <span>Raven Schultz · Seattle, WA · US Citizen</span>
       </div>
       <div className={`initialInvis ${css.row}`}>
         <Button href="https://www.linkedin.com/in/ravenschultz/" target="_blank">LinkedIn</Button>

@@ -28,6 +28,10 @@
 
     line-height: var(--lineHeight);
 
+    text-align: justify;
+    hyphens: auto;
+    hyphenate-limit-chars: 8 3 3;
+    hyphenate-limit-lines: 2;
     p:first-child{
       margin-top: 0;
     }
